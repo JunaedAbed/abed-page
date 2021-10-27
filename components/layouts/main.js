@@ -1,4 +1,4 @@
-import { Box, Container } from "@chakra-ui/layout";
+import { Box, Container } from "@chakra-ui/react";
 import Head from "next/head";
 
 const Main = ({ children, router }) => {

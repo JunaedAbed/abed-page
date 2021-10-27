@@ -6,8 +6,9 @@
       "error",
       {
         "argsIgnorePattern": "^_",
-        "varsIgnorePatter": "^_"
+        "varsIgnorePattern": "^_"
       }
-    ]
+    ],
+    "react/display-name": 0
   }
 }
