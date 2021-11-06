@@ -25,7 +25,7 @@ const components = {
   },
   Link: {
     baseStyle: (props) => ({
-      color: mode("#4d6d9a", "#c3073f")(props),
+      color: mode("#4d6d9a", "#e13d6e")(props),
       textUnderlineOffset: 3,
     }),
   },

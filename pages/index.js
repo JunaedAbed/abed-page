@@ -11,8 +11,24 @@ import {
 import Section from "../components/section";
 import Paragraph from "../components/paragraph";
 import { ChevronRightIcon } from "@chakra-ui/icons";
+import { BioSection, BioYear } from "../components/bio";
+import Skill from "../components/skill";
 
 const Page = () => {
+  const skills = [
+    "Java",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "React Native",
+    "Node.js",
+    "PHP",
+    "Python",
+    "Laravel",
+    "MySQL",
+    "Firebase",
+  ];
+
   return (
     <Container>
       <Box
@@ -60,9 +76,9 @@ const Page = () => {
             I&apos;m a software engineer in Dhaka, Bangladesh with a passion for
             web development. I&apos;m currently doing a Bachelor of Science in
             Computer Science and Engineering from{" "}
-            <NextLink href="www.bracu.ac.bd">
-              <Link>Brac University</Link>
-            </NextLink>
+            <Link href="https://www.bracu.ac.bd/" target="_blank">
+              Brac University
+            </Link>
             . Currently I&apos;m working on my thesis based on Deep Learning
             algorithm.
           </Paragraph>
@@ -74,6 +90,69 @@ const Page = () => {
             </NextLink>
           </Box>
         </p>
+      </Section>
+
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          Bio
+        </Heading>
+        <BioSection>
+          <BioYear>1998</BioYear>Born in Chittagong, Bangladesh.
+        </BioSection>
+        <BioSection>
+          <BioYear>2017</BioYear>Completed Higher Secondary School Certificate
+          from{" "}
+          <Link href="http://ccpc.edu.bd/" target="_blank">
+            Chittagong Cantonment Public College
+          </Link>
+          .
+        </BioSection>
+        <BioSection>
+          <BioYear>2018 to now</BioYear>Completing Bachelor of Science in
+          Computer Science and Engineering from{" "}
+          <Link href="https://www.bracu.ac.bd/" target="_blank">
+            Brac University
+          </Link>
+          .
+        </BioSection>
+      </Section>
+
+      <Section delay={0.4}>
+        <Heading as="h3" variant="section-title">
+          I ♥
+        </Heading>
+        <Paragraph>
+          <Link
+            href="https://open.spotify.com/playlist/1VkO3YcqrjJ6ddSu6fljAo?si=eff93a93be2a4a0e"
+            target="_blank"
+          >
+            Music
+          </Link>
+          ,{" "}
+          <Link href="https://soundcloud.com/junaed-abed-98" target="_blank">
+            Playing Guitar
+          </Link>
+          ,{" "}
+          <Link href="https://github.com/JunaedAbed" target="_blank">
+            Coding
+          </Link>
+          , Football,{" "}
+          <Link href="https://www.instagram.com/mugdho.nef/" target="_blank">
+            Photography
+          </Link>
+          , Watching Series
+        </Paragraph>
+      </Section>
+
+      <Section delay={0.5}>
+        <Heading as="h3" variant="section-title">
+          Skills
+        </Heading>
+        <Skill>
+          <ul className="skills-list">
+            {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
+          </ul>
+        </Skill>
       </Section>
     </Container>
   );
