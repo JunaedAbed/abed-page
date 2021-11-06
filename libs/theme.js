@@ -14,10 +14,10 @@ const components = {
     variants: {
       "section-title": {
         textDecoration: "underline",
-        fontSize: 20,
+        fontSize: 21,
         textUnderlineOffset: 6,
         textDecorationColor: "#3b3c3d",
-        textDecorationThickness: 4,
+        textDecorationThickness: 5,
         marginTop: 3,
         marginBottom: 4,
       },
@@ -25,7 +25,7 @@ const components = {
   },
   Link: {
     baseStyle: (props) => ({
-      color: mode("#4d6d9a", "#950740")(props),
+      color: mode("#4d6d9a", "#c3073f")(props),
       textUnderlineOffset: 3,
     }),
   },

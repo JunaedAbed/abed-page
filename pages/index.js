@@ -1,10 +1,16 @@
+import NextLink from "next/link";
 import {
   Container,
   Box,
   Heading,
   Image,
+  Link,
+  Button,
   useColorModeValue,
 } from "@chakra-ui/react";
+import Section from "../components/section";
+import Paragraph from "../components/paragraph";
+import { ChevronRightIcon } from "@chakra-ui/icons";
 
 const Page = () => {
   return (
@@ -44,6 +50,31 @@ const Page = () => {
           />
         </Box>
       </Box>
+
+      <Section delay={0.2}>
+        <Heading as="h3" variant="section-title">
+          Work
+        </Heading>
+        <p>
+          <Paragraph>
+            I&apos;m a software engineer in Dhaka, Bangladesh with a passion for
+            web development. I&apos;m currently doing a Bachelor of Science in
+            Computer Science and Engineering from{" "}
+            <NextLink href="www.bracu.ac.bd">
+              <Link>Brac University</Link>
+            </NextLink>
+            . Currently I&apos;m working on my thesis based on Deep Learning
+            algorithm.
+          </Paragraph>
+          <Box align="center" my={4}>
+            <NextLink href="/works">
+              <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+                My Portfolio
+              </Button>
+            </NextLink>
+          </Box>
+        </p>
+      </Section>
     </Container>
   );
 };
