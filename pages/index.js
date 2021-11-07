@@ -73,9 +73,9 @@ const Page = () => {
         </Heading>
         <p>
           <Paragraph>
-            I&apos;m a software engineer in Dhaka, Bangladesh with a passion for
-            web development. I&apos;m currently doing a Bachelor of Science in
-            Computer Science and Engineering from{" "}
+            I&apos;m a software engineer based in Dhaka, Bangladesh with a
+            passion for web development. I&apos;m currently doing a Bachelor of
+            Science in Computer Science and Engineering from{" "}
             <Link href="https://www.bracu.ac.bd/" target="_blank">
               Brac University
             </Link>

@@ -19,6 +19,7 @@ const Skill = styled.ul`
         content: "➤";
         position: absolute;
         left: 0;
+        top: 6px;
         line-height: 12px;
       }
     }
