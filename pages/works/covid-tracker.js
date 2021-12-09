@@ -32,8 +32,14 @@ const Work = () => (
         </ListItem>
       </List>
 
-      <WorkImage src="/images/works/covid-tracker_01.png" alt="Inkdrop" />
-      <WorkImage src="/images/works/covid-tracker_02.png" alt="Inkdrop" />
+      <WorkImage
+        src="/images/works/covid-tracker_01.png"
+        alt="covid-tracker01"
+      />
+      <WorkImage
+        src="/images/works/covid-tracker_02.png"
+        alt="covid-tracker02"
+      />
     </Container>
   </Layout>
 );

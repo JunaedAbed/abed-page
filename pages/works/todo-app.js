@@ -6,31 +6,32 @@ import {
   ListItem,
   AspectRatio,
 } from "@chakra-ui/react";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { Title, WorkImage, Meta } from "../../components/work";
 import P from "../../components/paragraph";
 import Layout from "../../components/layouts/article";
 
 const Work = () => (
-  <Layout title="CarPod">
+  <Layout title="Todo App">
     <Container>
       <Title>
-        CarPod <Badge>2020</Badge>
+        Todo App <Badge>2020</Badge>
       </Title>
-      <P>CarPod is an online car showroom.</P>
+      <P>Simple Todo App.</P>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>Platform</Meta>
-          <span>Web Browser</span>
+          <span>Android, IOS</span>
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>
-          <span>PHP, Laravel, MySQL</span>
+          <span>React Native, Firebase</span>
         </ListItem>
       </List>
 
       <AspectRatio maxW="640px" ratio={1.7} my={4}>
         <iframe
-          src="https://www.youtube.com/embed/hBWNRwZD2iI"
+          src="https://www.youtube.com/embed/T8xxUQY62N0"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -38,7 +39,7 @@ const Work = () => (
         ></iframe>
       </AspectRatio>
 
-      <WorkImage src="/images/works/carpod.png" alt="CarPod" />
+      <WorkImage src="/images/works/todo.png" alt="Todo App" />
     </Container>
   </Layout>
 );
