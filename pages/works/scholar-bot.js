@@ -12,12 +12,15 @@ import P from "../../components/paragraph";
 import Layout from "../../components/layouts/article";
 
 const Work = () => (
-  <Layout title="Todo App">
+  <Layout title="Scholar Bot">
     <Container>
       <Title>
-        Todo App <Badge>2020</Badge>
+        Scholar Bot <Badge>2021</Badge>
       </Title>
-      <P>Simple Todo App.</P>
+      <P>
+        A discord bot to Google search and to download thesis papers via
+        Sci-Hub.
+      </P>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>Platform</Meta>
@@ -29,23 +32,16 @@ const Work = () => (
         </ListItem>
         <ListItem>
           <Meta>Github</Meta>
-          <Link href="https://github.com/JunaedAbed/todo-react-native">
-            Todo App <ExternalLinkIcon mx="2px" />
+          <Link href="https://github.com/JunaedAbed/Scholar-Bot">
+            Scholar Bot <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
       </List>
 
-      <AspectRatio maxW="640px" ratio={1.7} my={4}>
-        <iframe
-          src="https://www.youtube.com/embed/T8xxUQY62N0"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </AspectRatio>
-
-      <WorkImage src="/images/works/todo.png" alt="Todo App" />
+      <WorkImage src="/images/works/scholar-bot.png" alt="Scholar Bot" />
+      <WorkImage src="/images/works/scholar-bot_01.png" alt="Scholar Bot" />
+      <WorkImage src="/images/works/scholar-bot_02.png" alt="Scholar Bot" />
+      <WorkImage src="/images/works/scholar-bot_03.png" alt="Scholar Bot" />
     </Container>
   </Layout>
 );

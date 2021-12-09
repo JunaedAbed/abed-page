@@ -28,7 +28,13 @@ const Work = () => (
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>
-          <span>ReactJS</span>
+          <span>ReactJS, API</span>
+        </ListItem>
+        <ListItem>
+          <Meta>Github</Meta>
+          <Link href="https://github.com/JunaedAbed/covid-tracker-react">
+            Covid Tracker <ExternalLinkIcon mx="2px" />
+          </Link>
         </ListItem>
       </List>
 

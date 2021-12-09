@@ -6,6 +6,7 @@ import {
   ListItem,
   AspectRatio,
 } from "@chakra-ui/react";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { Title, WorkImage, Meta } from "../../components/work";
 import P from "../../components/paragraph";
 import Layout from "../../components/layouts/article";
@@ -25,6 +26,12 @@ const Work = () => (
         <ListItem>
           <Meta>Stack</Meta>
           <span>PHP, Laravel, MySQL</span>
+        </ListItem>
+        <ListItem>
+          <Meta>Github</Meta>
+          <Link href="https://github.com/JunaedAbed/carPod">
+            CarPod <ExternalLinkIcon mx="2px" />
+          </Link>
         </ListItem>
       </List>
 
