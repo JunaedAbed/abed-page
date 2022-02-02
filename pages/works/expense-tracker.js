@@ -12,36 +12,40 @@ import P from "../../components/paragraph";
 import Layout from "../../components/layouts/article";
 
 const Work = () => (
-  <Layout title="Scholar Bot">
+  <Layout title="Expense Tracker">
     <Container>
       <Title>
-        Scholar Bot <Badge>2021</Badge>
+        Expense Tracker <Badge>2020</Badge>
       </Title>
-      <P>
-        A discord bot to Google search and to download thesis papers via
-        Sci-Hub.
-      </P>
+      <P>Expense calculator.</P>
       <List ml={4} my={4}>
         <ListItem>
+          <Meta>Website</Meta>
+          <Link href="https://expense-tracker-amethyst.netlify.app/">
+            https://expense-tracker-amethyst.netlify.app/
+            <ExternalLinkIcon mx="2px" />
+          </Link>
+        </ListItem>
+        <ListItem>
           <Meta>Platform</Meta>
-          <span>Discord</span>
+          <span>Web browser</span>
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>
-          <span>Python</span>
+          <span>NodeJS, ReactJS</span>
         </ListItem>
         <ListItem>
           <Meta>Github</Meta>
-          <Link href="https://github.com/JunaedAbed/Scholar-Bot">
-            Scholar Bot <ExternalLinkIcon mx="2px" />
+          <Link href="https://github.com/JunaedAbed/expense-tracker-react">
+            Expense Tracker <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
       </List>
 
-      <WorkImage src="/images/works/scholar-bot.png" alt="Scholar Bot" />
-      <WorkImage src="/images/works/scholar-bot_01.png" alt="Scholar Bot" />
-      <WorkImage src="/images/works/scholar-bot_02.png" alt="Scholar Bot" />
-      <WorkImage src="/images/works/scholar-bot_03.png" alt="Scholar Bot" />
+      <WorkImage
+        src="/images/works/expense-tracker.png"
+        alt="Expense Tracker"
+      />
     </Container>
   </Layout>
 );

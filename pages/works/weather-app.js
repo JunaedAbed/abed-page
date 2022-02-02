@@ -12,36 +12,34 @@ import P from "../../components/paragraph";
 import Layout from "../../components/layouts/article";
 
 const Work = () => (
-  <Layout title="Scholar Bot">
+  <Layout title="Weather App">
     <Container>
       <Title>
-        Scholar Bot <Badge>2021</Badge>
+        Weather App <Badge>2021</Badge>
       </Title>
       <P>
-        A discord bot to Google search and to download thesis papers via
-        Sci-Hub.
+        A weather app that shows current temperature, weather type and location
       </P>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>Platform</Meta>
-          <span>Discord</span>
+          <span>Android, IOS</span>
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>
-          <span>Python</span>
+          <span>React Native, Firebase</span>
         </ListItem>
         <ListItem>
           <Meta>Github</Meta>
-          <Link href="https://github.com/JunaedAbed/Scholar-Bot">
-            Scholar Bot <ExternalLinkIcon mx="2px" />
+          <Link href="https://github.com/JunaedAbed/weather-app-react-native">
+            Weather App <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
       </List>
 
-      <WorkImage src="/images/works/scholar-bot.png" alt="Scholar Bot" />
-      <WorkImage src="/images/works/scholar-bot_01.png" alt="Scholar Bot" />
-      <WorkImage src="/images/works/scholar-bot_02.png" alt="Scholar Bot" />
-      <WorkImage src="/images/works/scholar-bot_03.png" alt="Scholar Bot" />
+      <WorkImage src="/images/works/weather.png" alt="Weather App" />
+      <WorkImage src="/images/works/weather_01.png" alt="Weather App" />
+      <WorkImage src="/images/works/weather_02.png" alt="Weather App" />
     </Container>
   </Layout>
 );
