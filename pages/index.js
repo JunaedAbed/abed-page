@@ -6,7 +6,11 @@ import {
   Image,
   Link,
   Button,
+  List,
+  ListItem,
+  Icon,
   useColorModeValue,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import Section from "../components/section";
 import Paragraph from "../components/paragraph";
@@ -14,6 +18,19 @@ import Layout from "../components/layouts/article";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { BioSection, BioYear } from "../components/bio";
 import Skill from "../components/skill";
+import { GridItem } from "../components/grid-item";
+import {
+  IoLogoTwitter,
+  IoLogoInstagram,
+  IoLogoGithub,
+  IoLogoLinkedin,
+  IoLogoPinterest,
+  IoLogoDiscord,
+  IoLogoFacebook,
+  IoMail,
+} from "react-icons/io5";
+import thumbYouTube from "../public/images/links/YouTube.png";
+import thumbCovidTacker from "../public/images/links/Covid Tracker.png";
 
 const Page = () => {
   const skills = [
@@ -155,6 +172,128 @@ const Page = () => {
               {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
             </ul>
           </Skill>
+        </Section>
+
+        <Section delay={0.6}>
+          <Heading as="h3" variant="section-title">
+            Catch me on
+          </Heading>
+          <List>
+            <ListItem>
+              <Link href="mailto:junaed98m@gmail.com" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={IoMail} />}
+                >
+                  @Md. Junaed Abed
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://github.com/JunaedAbed" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={IoLogoGithub} />}
+                >
+                  @JunaedAbed
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://www.linkedin.com/in/mdjunaedabed/"
+                target="_blank"
+              >
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={IoLogoLinkedin} />}
+                >
+                  @mdjunaedabed
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://www.facebook.com/junaed.abed" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={IoLogoFacebook} />}
+                >
+                  @junaed.abed
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://www.instagram.com/mugdho.abed/"
+                target="_blank"
+              >
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={IoLogoInstagram} />}
+                >
+                  @mugdho.abed
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://twitter.com/junaed_abed_" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={IoLogoTwitter} />}
+                >
+                  @junaed_abed_
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://www.pinterest.com/jmugdho/" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={IoLogoPinterest} />}
+                >
+                  @jmugdho
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://discordapp.com/users/708306618663698432/"
+                target="_blank"
+              >
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<Icon as={IoLogoDiscord} />}
+                >
+                  @Junaed Abed#6767
+                </Button>
+              </Link>
+            </ListItem>
+          </List>
+
+          <SimpleGrid columns={[1, 2, 2]} gap={6}>
+            <GridItem
+              href="https://www.youtube.com/channel/UCbm159PNhsIgRM8dwDgq06Q/videos"
+              title="Junaed Abed"
+              thumbnail={thumbYouTube}
+            >
+              My YouTube channel
+            </GridItem>
+            <GridItem
+              href="https://covid-tracker-3ce38.web.app/"
+              title="Covid Tracker"
+              thumbnail={thumbCovidTacker}
+            >
+              A Covid stats App
+            </GridItem>
+          </SimpleGrid>
         </Section>
       </Container>
     </Layout>
