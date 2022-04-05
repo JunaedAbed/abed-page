@@ -3,6 +3,7 @@ import Section from "../components/section";
 import Layout from "../components/layouts/article";
 import { WorkGridItem } from "../components/grid-item";
 
+import thumbSweetsCloud from "../public/images/works/sweets-cloud.png";
 import thumbCovidTracker from "../public/images/works/covid-tracker.png";
 import thumbCarpod from "../public/images/works/carpod.png";
 import thumbWeatherApp from "../public/images/works/weather.png";
@@ -21,6 +22,16 @@ const Works = () => {
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section>
+            <WorkGridItem
+              id="sweets-cloud"
+              title="Sweets Cloud"
+              thumbnail={thumbSweetsCloud}
+            >
+              An e-commerce website for sweets.
+            </WorkGridItem>
+          </Section>
+
+          <Section delay={0.1}>
             <WorkGridItem
               id="covid-tracker"
               title="Covid Tracker"
