@@ -31,6 +31,7 @@ import {
 } from "react-icons/io5";
 import thumbYouTube from "../public/images/links/YouTube.png";
 import thumbCovidTacker from "../public/images/links/Covid Tracker.png";
+import thumbSweetsCloud from "../public/images/links/sweets-cloud.png";
 
 const Page = () => {
   const skills = [
@@ -45,6 +46,7 @@ const Page = () => {
     "Laravel",
     "MySQL",
     "Firebase",
+    "NextJS",
   ];
 
   return (
@@ -285,6 +287,13 @@ const Page = () => {
               thumbnail={thumbYouTube}
             >
               My YouTube channel
+            </GridItem>
+            <GridItem
+              href="https://www.sweets-cloud.com/"
+              title="Sweets Cloud"
+              thumbnail={thumbSweetsCloud}
+            >
+              An E-commerce website for sweets
             </GridItem>
             <GridItem
               href="https://covid-tracker-3ce38.web.app/"

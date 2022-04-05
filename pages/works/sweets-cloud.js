@@ -14,7 +14,7 @@ const Work = () => (
       <List ml={4} my={4}>
         <ListItem>
           <Meta>Website</Meta>
-          <Link href="https://sweets-cloud.com">
+          <Link href="https://sweets-cloud.com" target="_blank">
             https://sweets-cloud.com
             <ExternalLinkIcon mx="2px" />
           </Link>
@@ -29,14 +29,16 @@ const Work = () => (
         </ListItem>
         <ListItem>
           <Meta>Github</Meta>
-          <Link href="https://github.com/JunaedAbed/sweets-cloud">
+          <Link
+            href="https://github.com/JunaedAbed/sweets-cloud"
+            target="_blank"
+          >
             Sweets-cloud <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
       </List>
 
       <WorkImage src="/images/works/sweets-cloud_01.png" alt="sweets-cloud01" />
-      <WorkImage src="/images/works/sweets-cloud_02.png" alt="sweets-cloud02" />
       <WorkImage src="/images/works/sweets-cloud_03.png" alt="sweets-cloud03" />
       <WorkImage src="/images/works/sweets-cloud_04.png" alt="sweets-cloud04" />
     </Container>
