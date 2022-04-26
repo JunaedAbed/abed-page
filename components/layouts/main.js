@@ -17,11 +17,12 @@ const Main = ({ children, router }) => {
         <meta name="description" content="Abed's homepage" />
         <meta name="author" content="Junaed Abed" />
         <meta name="author" content="abed" />
-        <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/logo192.png" />
+        <link rel="shortcut icon" href="/junaed.png" type="image/x-icon" />
         <meta property="og:site_name" content="Abed's Homepage" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/card.png" />
+        <link rel="manifest" href="/manifest.json" />
         <title>Abed - Homepage</title>
       </Head>
 
