@@ -23,6 +23,7 @@ const Main = ({ children, router }) => {
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/card.png" />
         <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#000000" />
         <title>Abed - Homepage</title>
       </Head>
 
