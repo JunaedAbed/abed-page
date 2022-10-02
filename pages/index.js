@@ -47,6 +47,8 @@ const Page = () => {
     "MySQL",
     "Firebase",
     "NextJS",
+    "ASP.net",
+    "Flutter",
   ];
 
   return (
@@ -95,13 +97,12 @@ const Page = () => {
           <p>
             <Paragraph>
               I&apos;m a software engineer based in Dhaka, Bangladesh with a
-              passion for web development. I&apos;m currently doing a Bachelor
-              of Science in Computer Science and Engineering from{" "}
-              <Link href="https://www.bracu.ac.bd/" target="_blank">
-                Brac University
+              passion for web development. I&apos;m currently working as an ERP
+              Designer and Android Developer at{" "}
+              <Link href="https://www.akijtakafullife.com.bd/" target="_blank">
+                Akij Takaful Life Insurance PLC
               </Link>
-              . Currently I&apos;m working on my thesis based on Deep Learning
-              algorithm.
+              .
             </Paragraph>
             <Box align="center" my={4}>
               <NextLink href="/works">
@@ -129,10 +130,17 @@ const Page = () => {
             .
           </BioSection>
           <BioSection>
-            <BioYear>2018 to now</BioYear>Completing Bachelor of Science in
-            Computer Science and Engineering from{" "}
+            <BioYear>2022</BioYear>Completed Bachelor of Science in Computer
+            Science and Engineering from{" "}
             <Link href="https://www.bracu.ac.bd/" target="_blank">
               Brac University
+            </Link>
+            .
+          </BioSection>
+          <BioSection>
+            <BioYear>Oct 2022 to Now</BioYear>ERP Designer and Android Developer{" "}
+            <Link href="https://www.akijtakafullife.com.bd/" target="_blank">
+              Akij Takaful Life Insurance PLC
             </Link>
             .
           </BioSection>
