@@ -98,7 +98,7 @@ const Page = () => {
             <Paragraph>
               I&apos;m a software engineer based in Dhaka, Bangladesh with a
               passion for web development. I&apos;m currently working as an ERP
-              Designer and Android Developer at{" "}
+              and Android Developer at{" "}
               <Link href="https://www.akijtakafullife.com.bd/" target="_blank">
                 Akij Takaful Life Insurance PLC
               </Link>
@@ -138,7 +138,7 @@ const Page = () => {
             .
           </BioSection>
           <BioSection>
-            <BioYear>Oct 2022 to Now</BioYear>ERP Designer and Android Developer{" "}
+            <BioYear>Oct 2022 to Now</BioYear>ERP and Android Developer{" "}
             <Link href="https://www.akijtakafullife.com.bd/" target="_blank">
               Akij Takaful Life Insurance PLC
             </Link>
