@@ -3,6 +3,7 @@ import Section from "../components/section";
 import Layout from "../components/layouts/article";
 import { WorkGridItem } from "../components/grid-item";
 
+import thumbMyAkijTakaful from "../public/images/works/my-akij-takaful_01.png";
 import thumbSweetsCloud from "../public/images/works/sweets-cloud.png";
 import thumbCovidTracker from "../public/images/works/covid-tracker.png";
 import thumbCarpod from "../public/images/works/carpod.png";
@@ -17,11 +18,30 @@ const Works = () => {
     <Layout>
       <Container>
         <Heading as="h3" fontSize={22} mb={5}>
-          Works
+          Professional Works
         </Heading>
 
+        <SimpleGrid columns={[1, 1, 3]} gap={6}>
+          <Section delay={0.1}>
+            <WorkGridItem
+              id="my-akij-takaful"
+              title="My Akij Takaful"
+              thumbnail={thumbMyAkijTakaful}
+            >
+              A mobile app for Akij Takaful Life Insurance users.
+            </WorkGridItem>
+          </Section>
+        </SimpleGrid>
+
+        <Section delay={0.2}>
+          <Divider my={6} />
+          <Heading as="h3" fontSize={22} mb={5}>
+            Personal Works
+          </Heading>
+        </Section>
+
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
-          <Section>
+          <Section delay={0.4}>
             <WorkGridItem
               id="sweets-cloud"
               title="Sweets Cloud"
@@ -31,7 +51,7 @@ const Works = () => {
             </WorkGridItem>
           </Section>
 
-          <Section delay={0.1}>
+          <Section delay={0.5}>
             <WorkGridItem
               id="covid-tracker"
               title="Covid Tracker"
@@ -42,20 +62,20 @@ const Works = () => {
             </WorkGridItem>
           </Section>
 
-          <Section delay={0.1}>
+          <Section delay={0.6}>
             <WorkGridItem id="carpod" title="CarPod" thumbnail={thumbCarpod}>
               CarPod is an online car showroom. It is built on Laravel
               framework.
             </WorkGridItem>
           </Section>
 
-          <Section delay={0.2}>
+          <Section delay={0.7}>
             <WorkGridItem id="todo-app" title="Todo App" thumbnail={thumbTodo}>
               A todo app built on React-Native framework.
             </WorkGridItem>
           </Section>
 
-          <Section delay={0.3}>
+          <Section delay={0.8}>
             <WorkGridItem
               id="scholar-bot"
               title="Scholar Bot"
@@ -67,7 +87,7 @@ const Works = () => {
           </Section>
         </SimpleGrid>
 
-        <Section delay={0.4}>
+        <Section delay={0.9}>
           <Divider my={6} />
 
           <Heading as="h3" fontSize={22} mb={5}>
@@ -76,7 +96,7 @@ const Works = () => {
         </Section>
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
-          <Section delay={0.5}>
+          <Section delay={0.9}>
             <WorkGridItem
               id="insta-bot"
               title="Instagram Bot"
@@ -86,7 +106,7 @@ const Works = () => {
             </WorkGridItem>
           </Section>
 
-          <Section delay={0.6}>
+          <Section delay={0.9}>
             <WorkGridItem
               id="weather-app"
               title="Weather App"
@@ -96,7 +116,7 @@ const Works = () => {
             </WorkGridItem>
           </Section>
 
-          <Section delay={0.7}>
+          <Section delay={0.9}>
             <WorkGridItem
               id="expense-tracker"
               title="Expense Tracker"
