@@ -2,6 +2,12 @@
   "root": true,
   "extends": "next",
   "rules": {
+    "react/no-unknown-property": [
+      2,
+      {
+        "ignore": ["jsx", "global"]
+      }
+    ],
     "no-unused-vars": [
       "error",
       {
