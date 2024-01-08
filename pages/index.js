@@ -297,8 +297,8 @@ const Page = () => {
               My YouTube channel
             </GridItem>
             <GridItem
-              href="https://www.sweets-cloud.com/"
-              title="Sweets Cloud"
+              href="https://www.sweetscloudbd.com/"
+              title="Sweets"
               thumbnail={thumbSweetsCloud}
             >
               An E-commerce website for sweets
