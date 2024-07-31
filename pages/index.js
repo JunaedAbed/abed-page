@@ -99,7 +99,7 @@ const Page = () => {
               I&apos;m a software engineer based in Dhaka, Bangladesh with a
               passion for web development. I&apos;m currently working as an ERP
               and Android Developer at{" "}
-              <Link href="https://www.akijtakafullife.com.bd/" target="_blank">
+              <Link legacyBehavior href="https://www.akijtakafullife.com.bd/" target="_blank">
                 Akij Takaful Life Insurance PLC
               </Link>
               .
@@ -124,7 +124,7 @@ const Page = () => {
           <BioSection>
             <BioYear>2017</BioYear>Completed Higher Secondary School Certificate
             from{" "}
-            <Link href="http://ccpc.edu.bd/" target="_blank">
+            <Link legacyBehavior href="http://ccpc.edu.bd/" target="_blank">
               Chittagong Cantonment Public College
             </Link>
             .
@@ -132,14 +132,14 @@ const Page = () => {
           <BioSection>
             <BioYear>2022</BioYear>Completed Bachelor of Science in Computer
             Science and Engineering from{" "}
-            <Link href="https://www.bracu.ac.bd/" target="_blank">
+            <Link legacyBehavior href="https://www.bracu.ac.bd/" target="_blank">
               Brac University
             </Link>
             .
           </BioSection>
           <BioSection>
             <BioYear>Oct 2022 to Now</BioYear>ERP and Android Developer{" "}
-            <Link href="https://www.akijtakafullife.com.bd/" target="_blank">
+            <Link legacyBehavior href="https://www.akijtakafullife.com.bd/" target="_blank">
               Akij Takaful Life Insurance PLC
             </Link>
             .
@@ -151,7 +151,7 @@ const Page = () => {
             I ♥
           </Heading>
           <Paragraph>
-            <Link
+            <Link 
               href="https://open.spotify.com/playlist/1VkO3YcqrjJ6ddSu6fljAo?si=eff93a93be2a4a0e"
               target="_blank"
             >
@@ -190,7 +190,7 @@ const Page = () => {
           </Heading>
           <List>
             <ListItem>
-              <Link href="mailto:junaed98m@gmail.com" target="_blank">
+              <Link legacyBehavior href="mailto:junaed98m@gmail.com" target="_blank">
                 <Button
                   variant="ghost"
                   colorScheme="teal"

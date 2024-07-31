@@ -22,7 +22,7 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
   const inactiveColor = useColorModeValue("gray200", "whiteAlpha.900");
   return (
     <NextLink href={href} passHref>
-      <Link
+      <Link legacyBehavior
         p={2}
         bg={active ? "white" : undefined}
         color={active ? "#202023" : inactiveColor}

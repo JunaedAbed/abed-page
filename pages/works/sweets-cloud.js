@@ -14,7 +14,7 @@ const Work = () => (
       <List ml={4} my={4}>
         <ListItem>
           <Meta>Website</Meta>
-          <Link href="https://www.sweetscloudbd.com" target="_blank">
+          <Link legacyBehavior href="https://www.sweetscloudbd.com" target="_blank">
             https://www.sweetscloudbd.com
             <ExternalLinkIcon mx="2px" />
           </Link>
@@ -30,6 +30,7 @@ const Work = () => (
         <ListItem>
           <Meta>Github</Meta>
           <Link
+            legacyBehavior
             href="https://github.com/JunaedAbed/sweets-cloud"
             target="_blank"
           >
