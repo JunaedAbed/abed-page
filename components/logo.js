@@ -23,8 +23,8 @@ const Logo = () => {
   const fishImg = `/images/fish${useColorModeValue("", "-dark")}.png`;
 
   return (
-    <Link href="/">
-      <a>
+    <Link href="/" legacyBehavior>
+
         <LogoBox>
           <Image src={fishImg} width={25} height={25} alt="logo" />
           <Text
@@ -36,8 +36,8 @@ const Logo = () => {
             Junaed Abed
           </Text>
         </LogoBox>
-      </a>
-    </Link>
+
+      </Link>
   );
 };
 

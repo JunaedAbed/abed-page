@@ -36,19 +36,24 @@ import thumbSweetsCloud from "../public/images/links/sweets-cloud.png";
 const Page = () => {
   const skills = [
     "Java",
-    "JavaScript",
-    "TypeScript",
     "React",
+    "JavaScript",
     "React Native",
+    "TypeScript",
     "Node.js",
-    "PHP",
     "Python",
     "Laravel",
+    "PHP",
+    "ASP.net",
+    "C#",
+    "NextJS",
+    "Dart",
+    "Flutter",
+    "NestJs",
     "MySQL",
     "Firebase",
-    "NextJS",
-    "ASP.net",
-    "Flutter",
+    "MSSQL",
+    "MongoDB",
   ];
 
   return (
@@ -59,9 +64,11 @@ const Page = () => {
           bg={useColorModeValue("whiteAlpha.600", "whiteAlpha.300")}
           p={3}
           mb={6}
+          mt={10}
           alignContent="center"
         >
-          Hello, I&apos;m a fullstack developer from Bangladesh!
+          Hello, I&apos;m a developer transforming ideas into scallable
+          software!
         </Box>
 
         <Box display={{ md: "flex" }}>
@@ -69,7 +76,7 @@ const Page = () => {
             <Heading as="h2" variant="page-title">
               Md Junaed Abed
             </Heading>
-            <p>(Software Developer / Designer / Mobile App developer)</p>
+            <p>(Software / Mobile App developer)</p>
           </Box>
           <Box
             flexShrink={0}
@@ -94,24 +101,22 @@ const Page = () => {
           <Heading as="h3" variant="section-title">
             Work
           </Heading>
-          <p>
-            <Paragraph>
-              I&apos;m a software engineer based in Dhaka, Bangladesh with a
-              passion for web development. I&apos;m currently working as an ERP
-              and Android Developer at{" "}
-              <Link legacyBehavior href="https://www.akijtakafullife.com.bd/" target="_blank">
-                Akij Takaful Life Insurance PLC
-              </Link>
-              .
-            </Paragraph>
-            <Box align="center" my={4}>
-              <NextLink href="/works">
-                <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-                  My Portfolio
-                </Button>
-              </NextLink>
-            </Box>
-          </p>
+          {/* <p> */}
+          <Paragraph>
+            I&apos;m currently working as a Senior Executive Software Developer
+            at{" "}
+            <Link href="https://www.akijventure.com/" target="_blank">
+              Akij Venture Ltd.
+            </Link>
+          </Paragraph>
+          <Box align="center" my={4}>
+            <NextLink href="/works" legacyBehavior>
+              <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+                My Portfolio
+              </Button>
+            </NextLink>
+          </Box>
+          {/* </p> */}
         </Section>
 
         <Section delay={0.3}>
@@ -124,7 +129,7 @@ const Page = () => {
           <BioSection>
             <BioYear>2017</BioYear>Completed Higher Secondary School Certificate
             from{" "}
-            <Link legacyBehavior href="http://ccpc.edu.bd/" target="_blank">
+            <Link href="http://ccpc.edu.bd/" target="_blank">
               Chittagong Cantonment Public College
             </Link>
             .
@@ -132,15 +137,23 @@ const Page = () => {
           <BioSection>
             <BioYear>2022</BioYear>Completed Bachelor of Science in Computer
             Science and Engineering from{" "}
-            <Link legacyBehavior href="https://www.bracu.ac.bd/" target="_blank">
+            <Link href="https://www.bracu.ac.bd/" target="_blank">
               Brac University
             </Link>
             .
           </BioSection>
           <BioSection>
-            <BioYear>Oct 2022 to Now</BioYear>ERP and Android Developer{" "}
-            <Link legacyBehavior href="https://www.akijtakafullife.com.bd/" target="_blank">
+            <BioYear>Oct 2022 to May 2024</BioYear>ERP and Android Developer{" "}
+            <Link href="https://www.akijtakafullife.com.bd/" target="_blank">
               Akij Takaful Life Insurance PLC
+            </Link>
+            .
+          </BioSection>
+          <BioSection>
+            <BioYear>May 2022 to Present</BioYear>Senior Executive (Mobile App
+            Developer){" "}
+            <Link href="https://www.akijventure.com/" target="_blank">
+              Akij Venture Ltd.
             </Link>
             .
           </BioSection>
@@ -151,7 +164,7 @@ const Page = () => {
             I ♥
           </Heading>
           <Paragraph>
-            <Link 
+            <Link
               href="https://open.spotify.com/playlist/1VkO3YcqrjJ6ddSu6fljAo?si=eff93a93be2a4a0e"
               target="_blank"
             >
@@ -190,7 +203,7 @@ const Page = () => {
           </Heading>
           <List>
             <ListItem>
-              <Link legacyBehavior href="mailto:junaed98m@gmail.com" target="_blank">
+              <Link href="mailto:junaed98m@gmail.com" target="_blank">
                 <Button
                   variant="ghost"
                   colorScheme="teal"

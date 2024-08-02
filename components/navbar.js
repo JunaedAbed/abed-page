@@ -21,8 +21,8 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
   const active = path === href;
   const inactiveColor = useColorModeValue("gray200", "whiteAlpha.900");
   return (
-    <NextLink href={href} passHref>
-      <Link legacyBehavior
+    <NextLink href={href} passHref legacyBehavior>
+      <Link 
         p={2}
         bg={active ? "white" : undefined}
         color={active ? "#202023" : inactiveColor}
@@ -91,13 +91,13 @@ const Navbar = (props) => {
                 aria-label="Options"
               />
               <MenuList>
-                <NextLink href="/" passHref>
+                <NextLink href="/" passHref legacyBehavior>
                   <MenuItem as={Link}>About</MenuItem>
                 </NextLink>
-                <NextLink href="/works" passHref>
+                <NextLink href="/works" passHref legacyBehavior>
                   <MenuItem as={Link}>Works</MenuItem>
                 </NextLink>
-                <NextLink href="/Md_Junaed_Abed_CV.pdf" passHref>
+                <NextLink href="/Md_Junaed_Abed_CV.pdf" passHref legacyBehavior>
                   <MenuItem as={Link}>Resume</MenuItem>
                 </NextLink>
               </MenuList>
