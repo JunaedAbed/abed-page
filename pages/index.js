@@ -318,7 +318,7 @@ const Page = () => {
               An E-commerce website for sweets
             </GridItem>
             <GridItem
-              href="https://covid-tracker-3ce38.web.app/"
+              // href="https://covid-tracker-3ce38.web.app/"
               title="Fair Value"
               thumbnail={thumbFairValue}
             >
