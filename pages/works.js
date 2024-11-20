@@ -1,17 +1,19 @@
-import { Container, Heading, SimpleGrid, Divider } from "@chakra-ui/react";
-import Section from "../components/section";
-import Layout from "../components/layouts/article";
+import { Container, Divider, Heading, SimpleGrid } from "@chakra-ui/react";
 import { WorkGridItem } from "../components/grid-item";
+import Layout from "../components/layouts/article";
+import Section from "../components/section";
 
-import thumbMyAkijTakaful from "../public/images/works/my-akij-takaful_01.png";
-import thumbSweetsCloud from "../public/images/works/sweets-cloud.png";
-import thumbCovidTracker from "../public/images/works/covid-tracker.png";
+import thumbFairValue from "../public/images/links/fair_value.png";
+import thumbMyAkijTakaful from "../public/images/links/my_akij_takaful.png";
 import thumbCarpod from "../public/images/works/carpod.png";
-import thumbWeatherApp from "../public/images/works/weather.png";
-import thumbTodo from "../public/images/works/todo.png";
+import thumbCovidTracker from "../public/images/works/covid-tracker.png";
 import thumbExpTracker from "../public/images/works/expense-tracker.png";
-import thumbScholarBot from "../public/images/works/scholar-bot.png";
 import thumbInstaBot from "../public/images/works/insta-bot.png";
+
+import thumbScholarBot from "../public/images/works/scholar-bot.png";
+import thumbSweetsCloud from "../public/images/works/sweets-cloud.png";
+import thumbTodo from "../public/images/works/todo.png";
+import thumbWeatherApp from "../public/images/works/weather.png";
 
 const Works = () => {
   return (
@@ -21,7 +23,7 @@ const Works = () => {
           Professional Works
         </Heading>
 
-        <SimpleGrid columns={[1, 1, 3]} gap={6}>
+        <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section delay={0.1}>
             <WorkGridItem
               id="my-akij-takaful"
@@ -29,6 +31,15 @@ const Works = () => {
               thumbnail={thumbMyAkijTakaful}
             >
               A mobile app for Akij Takaful Life Insurance users.
+            </WorkGridItem>
+          </Section>
+          <Section delay={0.1}>
+            <WorkGridItem
+              id="fair-value"
+              title="Fair Value"
+              thumbnail={thumbFairValue}
+            >
+              Multi-vendor e-commerce app.
             </WorkGridItem>
           </Section>
         </SimpleGrid>

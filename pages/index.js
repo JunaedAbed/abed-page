@@ -1,37 +1,38 @@
-import NextLink from "next/link";
+import { ChevronRightIcon } from "@chakra-ui/icons";
 import {
-  Container,
   Box,
+  Button,
+  Container,
   Heading,
+  Icon,
   Image,
   Link,
-  Button,
   List,
   ListItem,
-  Icon,
-  useColorModeValue,
   SimpleGrid,
+  useColorModeValue,
 } from "@chakra-ui/react";
-import Section from "../components/section";
-import Paragraph from "../components/paragraph";
-import Layout from "../components/layouts/article";
-import { ChevronRightIcon } from "@chakra-ui/icons";
-import { BioSection, BioYear } from "../components/bio";
-import Skill from "../components/skill";
-import { GridItem } from "../components/grid-item";
+import NextLink from "next/link";
 import {
-  IoLogoTwitter,
-  IoLogoInstagram,
-  IoLogoGithub,
-  IoLogoLinkedin,
-  IoLogoPinterest,
   IoLogoDiscord,
   IoLogoFacebook,
+  IoLogoGithub,
+  IoLogoInstagram,
+  IoLogoLinkedin,
+  IoLogoPinterest,
+  IoLogoTwitter,
   IoMail,
 } from "react-icons/io5";
-import thumbYouTube from "../public/images/links/YouTube.png";
-import thumbCovidTacker from "../public/images/links/Covid Tracker.png";
+import { BioSection, BioYear } from "../components/bio";
+import { GridItem } from "../components/grid-item";
+import Layout from "../components/layouts/article";
+import Paragraph from "../components/paragraph";
+import Section from "../components/section";
+import Skill from "../components/skill";
+import thumbFairValue from "../public/images/links/fair_value.png";
+import thumbMyAkijTakaful from "../public/images/links/my_akij_takaful.png";
 import thumbSweetsCloud from "../public/images/links/sweets-cloud.png";
+import thumbYouTube from "../public/images/links/YouTube.png";
 
 const Page = () => {
   const skills = [
@@ -76,7 +77,7 @@ const Page = () => {
             <Heading as="h2" variant="page-title">
               Md Junaed Abed
             </Heading>
-            <p>(Software / Mobile App developer)</p>
+            <p>Software Engineer</p>
           </Box>
           <Box
             flexShrink={0}
@@ -103,7 +104,7 @@ const Page = () => {
           </Heading>
           {/* <p> */}
           <Paragraph>
-            I&apos;m currently working as a Senior Executive Software Developer
+            I&apos;m currently working as a Senior Executive Software Engineer
             at{" "}
             <Link href="https://www.akijventure.com/" target="_blank">
               Akij Venture Ltd.
@@ -150,7 +151,7 @@ const Page = () => {
             .
           </BioSection>
           <BioSection>
-            <BioYear>May 2022 to Present</BioYear>Senior Executive (Mobile App
+            <BioYear>May 2024 to Present</BioYear>Senior Executive (Mobile App
             Developer){" "}
             <Link href="https://www.akijventure.com/" target="_blank">
               Akij Venture Ltd.
@@ -318,10 +319,17 @@ const Page = () => {
             </GridItem>
             <GridItem
               href="https://covid-tracker-3ce38.web.app/"
-              title="Covid Tracker"
-              thumbnail={thumbCovidTacker}
+              title="Fair Value"
+              thumbnail={thumbFairValue}
             >
-              A Covid stats App
+              Multi Vendor E-commerce App
+            </GridItem>
+            <GridItem
+              href="https://play.google.com/store/apps/details?id=com.akijtakafullife.myAkijTakaful"
+              title="My Akij Takaful"
+              thumbnail={thumbMyAkijTakaful}
+            >
+              An Insurance App
             </GridItem>
           </SimpleGrid>
         </Section>

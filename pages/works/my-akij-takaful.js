@@ -1,8 +1,15 @@
-import { Container, Badge, Link, List, ListItem } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
-import { Title, WorkImage, Meta } from "../../components/work";
-import P from "../../components/paragraph";
+import {
+  Badge,
+  Container,
+  Link,
+  List,
+  ListItem,
+  SimpleGrid,
+} from "@chakra-ui/react";
 import Layout from "../../components/layouts/article";
+import P from "../../components/paragraph";
+import { Meta, Title, WorkImageApp } from "../../components/work";
 
 const Work = () => (
   <Layout title="My Akij Takaful">
@@ -24,35 +31,32 @@ const Work = () => (
         </ListItem>
         <ListItem>
           <Meta>Platform</Meta>
-          <span>Mobile</span>
+          <span>Android, iOS</span>
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>
           <span>Flutter, API from ERP using ASP.NET</span>
         </ListItem>
-        {/* <ListItem>
-          <Meta>Github</Meta>
-          <Link
-            href="https://github.com/JunaedAbed/sweets-cloud"
-            target="_blank"
-          >
-            Sweets-cloud <ExternalLinkIcon mx="2px" />
-          </Link>
-        </ListItem> */}
       </List>
 
-      <WorkImage
-        src="/images/works/my-akij-takaful_01.png"
-        alt="my-akij-takaful01"
-      />
-      <WorkImage
-        src="/images/works/my-akij-takaful_02.png"
-        alt="my-akij-takaful03"
-      />
-      <WorkImage
-        src="/images/works/my-akij-takaful_03.png"
-        alt="my-akij-takaful04"
-      />
+      <SimpleGrid columns={[1, 2]} spacing={4} mt={4}>
+        <WorkImageApp
+          src="/images/works/my-akij-takaful_06.png"
+          alt="my-akij-takaful06"
+        />
+        <WorkImageApp
+          src="/images/works/my-akij-takaful_02.png"
+          alt="my-akij-takaful02"
+        />
+        <WorkImageApp
+          src="/images/works/my-akij-takaful_05.png"
+          alt="my-akij-takaful05"
+        />
+        <WorkImageApp
+          src="/images/works/my-akij-takaful_04.png"
+          alt="my-akij-takaful04"
+        />
+      </SimpleGrid>
     </Container>
   </Layout>
 );
