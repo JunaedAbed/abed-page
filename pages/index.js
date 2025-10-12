@@ -151,9 +151,17 @@ const Page = () => {
             .
           </BioSection>
           <BioSection>
-            <BioYear>May 2024 to Present</BioYear>Senior Executive (Mobile App
+            <BioYear>May 2024 to Nov 2024</BioYear>Senior Executive (Backend
             Developer){" "}
             <Link href="https://www.akijventure.com/" target="_blank">
+              Akij Venture Ltd.
+            </Link>
+            .
+          </BioSection>
+          <BioSection>
+            <BioYear>Nov 2024 to Present</BioYear>Senior Executive (Backend
+            Developer){" "}
+            <Link href="https://www.neoscoder.com/" target="_blank">
               Akij Venture Ltd.
             </Link>
             .
