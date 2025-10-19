@@ -162,7 +162,7 @@ const Page = () => {
             <BioYear>Nov 2024 to Present</BioYear>Senior Executive (Backend
             Developer){" "}
             <Link href="https://www.neoscoder.com/" target="_blank">
-              Akij Venture Ltd.
+              Neoscoder Ltd.
             </Link>
             .
           </BioSection>
