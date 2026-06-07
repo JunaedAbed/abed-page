@@ -5,7 +5,7 @@ import { Meta, Title, WorkImageApp } from "../../components/work";
 
 const Work = () => (
   <Layout title="Fair Value">
-    <Container>
+    <Container maxW="6xl" px={{ base: 4, md: 6 }}>
       <Title>
         Fair Value <Badge>2024</Badge>
       </Title>

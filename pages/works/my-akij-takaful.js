@@ -13,7 +13,7 @@ import { Meta, Title, WorkImageApp } from "../../components/work";
 
 const Work = () => (
   <Layout title="My Akij Takaful">
-    <Container>
+    <Container maxW="6xl" px={{ base: 4, md: 6 }}>
       <Title>
         My Akij Takaful <Badge>2022</Badge>
       </Title>

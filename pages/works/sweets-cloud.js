@@ -6,7 +6,7 @@ import Layout from "../../components/layouts/article";
 
 const Work = () => (
   <Layout title="Sweets Cloud">
-    <Container>
+    <Container maxW="6xl" px={{ base: 4, md: 6 }}>
       <Title>
         Sweets Cloud <Badge>2022</Badge>
       </Title>
@@ -30,7 +30,7 @@ const Work = () => (
         <ListItem>
           <Meta>Github</Meta>
           <Link
-            
+
             href="https://github.com/JunaedAbed/sweets-cloud"
             target="_blank"
           >

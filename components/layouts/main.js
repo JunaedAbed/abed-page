@@ -11,7 +11,7 @@ import Navbar from "../navbar";
 
 const Main = ({ children, router }) => {
   return (
-    <Box as="main" pb={8}>
+    <Box as="main" pb={12}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Abed's homepage" />
@@ -28,7 +28,7 @@ const Main = ({ children, router }) => {
       </Head>
 
       <Navbar path={router.asPath} />
-      <Container maxW="container.md" pt={14}>
+      <Container maxW="container.xl" pt={{ base: 20, md: 24 }} pb={12}>
         {/* <LazyVoxelDog /> */}
         {children}
       </Container>

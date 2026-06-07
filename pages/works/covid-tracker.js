@@ -6,7 +6,7 @@ import Layout from "../../components/layouts/article";
 
 const Work = () => (
   <Layout title="Covid Tracker">
-    <Container>
+    <Container maxW="6xl" px={{ base: 4, md: 6 }}>
       <Title>
         Covid Tracker <Badge>2020</Badge>
       </Title>

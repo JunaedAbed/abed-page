@@ -22,7 +22,7 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
   const inactiveColor = useColorModeValue("gray200", "whiteAlpha.900");
   return (
     <NextLink href={href} passHref legacyBehavior>
-      <Link 
+      <Link
         p={2}
         bg={active ? "white" : undefined}
         color={active ? "#202023" : inactiveColor}
@@ -44,21 +44,24 @@ const Navbar = (props) => {
       position="fixed"
       as="nav"
       w="100%"
-      bg={useColorModeValue("#ffffff40", "#20202380")}
-      style={{ backdropFilter: "blur(10px)" }}
+      bg={useColorModeValue("rgba(255,255,255,0.74)", "rgba(15,23,42,0.74)")}
+      borderBottom="1px solid"
+      borderColor={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+      style={{ backdropFilter: "blur(14px)" }}
       zIndex={1}
       {...props}
     >
       <Container
         display="flex"
-        p={2}
-        maxW="container.md"
+        px={{ base: 3, md: 4 }}
+        py={3}
+        maxW="container.xl"
         wrap="wrap"
         align="center"
         justify="space-between"
       >
         <Flex align="center" mr={5}>
-          <Heading as="h1" size="lg" letterSpacing={"tighter"}>
+          <Heading as="h1" size="lg" letterSpacing={"tighter"} lineHeight={1}>
             <Logo />
           </Heading>
         </Flex>
@@ -89,6 +92,7 @@ const Navbar = (props) => {
                 icon={<HamburgerIcon />}
                 variant="outline"
                 aria-label="Options"
+                size="sm"
               />
               <MenuList>
                 <NextLink href="/" passHref legacyBehavior>

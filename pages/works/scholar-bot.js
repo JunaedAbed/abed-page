@@ -6,7 +6,7 @@ import Layout from "../../components/layouts/article";
 
 const Work = () => (
   <Layout title="Scholar Bot">
-    <Container>
+    <Container maxW="6xl" px={{ base: 4, md: 6 }}>
       <Title>
         Scholar Bot <Badge>2021</Badge>
       </Title>
