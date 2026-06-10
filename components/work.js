@@ -2,6 +2,7 @@ import { ChevronRightIcon } from "@chakra-ui/icons";
 import {
   Badge,
   Box,
+  Grid,
   Heading,
   Image,
   Link,
@@ -43,35 +44,69 @@ export const Title = ({ children }) => (
 
 export const WorkImage = ({ src, alt }) => (
   <Image
-    borderRadius="24px"
+    borderRadius="16px"
     w="full"
+    maxH={{ base: "180px", lg: "none" }}
+    objectFit="cover"
     src={src}
     alt={alt}
-    mb={5}
     border="1px solid"
     borderColor={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
     boxShadow={useColorModeValue(
-      "0 16px 36px rgba(15, 23, 42, 0.10)",
-      "0 16px 36px rgba(0, 0, 0, 0.28)"
+      "0 8px 24px rgba(15, 23, 42, 0.08)",
+      "0 8px 24px rgba(0, 0, 0, 0.24)"
     )}
   />
 );
+
 export const WorkImageApp = ({ src, alt }) => (
   <Image
-    borderRadius="24px"
+    borderRadius="16px"
     w="full"
-    maxW={{ base: "full", md: "560px" }}
-    mx="auto"
     src={src}
     alt={alt}
-    mb={5}
     border="1px solid"
     borderColor={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
     boxShadow={useColorModeValue(
-      "0 16px 36px rgba(15, 23, 42, 0.10)",
-      "0 16px 36px rgba(0, 0, 0, 0.28)"
+      "0 8px 24px rgba(15, 23, 42, 0.08)",
+      "0 8px 24px rgba(0, 0, 0, 0.24)"
     )}
   />
+);
+
+export const WorkDetailGrid = ({ children }) => (
+  <Grid
+    templateColumns={{ base: "1fr", lg: "1fr 360px" }}
+    gap={{ base: 5, md: 6 }}
+    mt={4}
+    alignItems="start"
+  >
+    {children}
+  </Grid>
+);
+
+export const WorkInfoPanel = ({ children }) => (
+  <Box
+    p={{ base: 4, md: 6 }}
+    borderRadius="20px"
+    bg={useColorModeValue("whiteAlpha.900", "whiteAlpha.50")}
+    border="1px solid"
+    borderColor={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+    boxShadow={useColorModeValue(
+      "0 8px 32px rgba(15, 23, 42, 0.07)",
+      "0 8px 32px rgba(0, 0, 0, 0.22)"
+    )}
+    position={{ base: "static", lg: "sticky" }}
+    top={{ lg: "96px" }}
+  >
+    {children}
+  </Box>
+);
+
+export const WorkImagePanel = ({ children }) => (
+  <Box display="flex" flexDirection="column" gap={3}>
+    {children}
+  </Box>
 );
 
 export const Meta = ({ children }) => (
