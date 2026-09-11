@@ -76,6 +76,10 @@ const Page = () => {
                         "0 24px 72px rgba(15, 23, 42, 0.10)",
                         "0 24px 72px rgba(0, 0, 0, 0.5)"
                     )}
+                    sx={{
+                        WebkitMaskImage: "-webkit-radial-gradient(white, black)",
+                        transform: "translateZ(0)",
+                    }}
                 >
                     <Box
                         position="absolute"

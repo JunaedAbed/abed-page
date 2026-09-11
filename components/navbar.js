@@ -53,10 +53,10 @@ const Navbar = (props) => {
       position="fixed"
       as="nav"
       w="100%"
-      bg={useColorModeValue("rgba(255,255,255,0.78)", "rgba(0,0,0,0.6)")}
+      bg={useColorModeValue("rgba(255,255,255,0.88)", "rgba(6,7,9,0.86)")}
       borderBottom="1px solid"
       borderColor={useColorModeValue("blackAlpha.100", "whiteAlpha.200")}
-      style={{ backdropFilter: "blur(20px) saturate(180%)" }}
+      style={{ backdropFilter: "blur(20px) saturate(180%)", WebkitBackdropFilter: "blur(20px) saturate(180%)" }}
       zIndex={1}
       {...props}
     >
@@ -100,18 +100,47 @@ const Navbar = (props) => {
                 as={IconButton}
                 icon={<HamburgerIcon />}
                 variant="outline"
+                color={useColorModeValue("#1d1d1f", "#f5f5f7")}
+                borderColor={useColorModeValue("blackAlpha.300", "whiteAlpha.400")}
                 aria-label="Options"
                 size="sm"
               />
-              <MenuList>
+              <MenuList
+                bg={useColorModeValue("#ffffff", "#101114")}
+                borderColor={useColorModeValue("blackAlpha.200", "whiteAlpha.200")}
+                boxShadow={useColorModeValue(
+                  "0 16px 40px rgba(15, 23, 42, 0.18)",
+                  "0 16px 40px rgba(0, 0, 0, 0.6)"
+                )}
+                py={2}
+                zIndex={10}
+              >
                 <NextLink href="/" passHref legacyBehavior>
-                  <MenuItem as={Link}>About</MenuItem>
+                  <MenuItem
+                    as={Link}
+                    bg="transparent"
+                    _hover={{ bg: useColorModeValue("blackAlpha.50", "whiteAlpha.100") }}
+                  >
+                    About
+                  </MenuItem>
                 </NextLink>
                 <NextLink href="/works" passHref legacyBehavior>
-                  <MenuItem as={Link}>Works</MenuItem>
+                  <MenuItem
+                    as={Link}
+                    bg="transparent"
+                    _hover={{ bg: useColorModeValue("blackAlpha.50", "whiteAlpha.100") }}
+                  >
+                    Works
+                  </MenuItem>
                 </NextLink>
                 <NextLink href="/Md_Junaed_Abed_CV.pdf" passHref legacyBehavior>
-                  <MenuItem as={Link}>Resume</MenuItem>
+                  <MenuItem
+                    as={Link}
+                    bg="transparent"
+                    _hover={{ bg: useColorModeValue("blackAlpha.50", "whiteAlpha.100") }}
+                  >
+                    Resume
+                  </MenuItem>
                 </NextLink>
               </MenuList>
             </Menu>
