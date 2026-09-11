@@ -19,14 +19,23 @@ import ThemeToggleButton from "./theme-toggle-button";
 
 const LinkItem = ({ href, path, _target, children, ...props }) => {
   const active = path === href;
-  const inactiveColor = useColorModeValue("gray200", "whiteAlpha.900");
+  const inactiveColor = useColorModeValue("gray.700", "whiteAlpha.800");
+  const activeBg = useColorModeValue(
+    "#0071e3",
+    "linear-gradient(120deg, #0a84ff, #32d6c4)"
+  );
+  const hoverColor = useColorModeValue("#0071e3", "#5ec2ff");
   return (
     <NextLink href={href} passHref legacyBehavior>
       <Link
-        p={2}
-        bg={active ? "white" : undefined}
-        color={active ? "#202023" : inactiveColor}
-        borderRadius={5}
+        px={3}
+        py={2}
+        fontWeight={600}
+        fontSize="sm"
+        bg={active ? activeBg : undefined}
+        color={active ? "#ffffff" : inactiveColor}
+        borderRadius="full"
+        _hover={{ textDecoration: "none", color: active ? "#ffffff" : hoverColor }}
         _target={_target}
         {...props}
       >
@@ -44,10 +53,10 @@ const Navbar = (props) => {
       position="fixed"
       as="nav"
       w="100%"
-      bg={useColorModeValue("rgba(255,255,255,0.74)", "rgba(15,23,42,0.74)")}
+      bg={useColorModeValue("rgba(255,255,255,0.78)", "rgba(0,0,0,0.6)")}
       borderBottom="1px solid"
-      borderColor={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
-      style={{ backdropFilter: "blur(14px)" }}
+      borderColor={useColorModeValue("blackAlpha.100", "whiteAlpha.200")}
+      style={{ backdropFilter: "blur(20px) saturate(180%)" }}
       zIndex={1}
       {...props}
     >

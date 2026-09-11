@@ -7,27 +7,33 @@ const styles = {
       scrollBehavior: "smooth",
     },
     body: {
-      bg: mode(
-        "linear-gradient(180deg, #f8fafc 0%, #eef4fb 45%, #e8f0fa 100%)",
-        "linear-gradient(180deg, #0b1220 0%, #111827 45%, #0f172a 100%)"
+      backgroundColor: mode("#f7f8fa", "#000000")(props),
+      backgroundImage: mode(
+        "radial-gradient(900px 480px at 50% -10%, rgba(10,132,255,0.06), transparent 60%)",
+        "radial-gradient(1000px 560px at 12% -10%, rgba(10,132,255,0.26), transparent 60%), radial-gradient(900px 520px at 100% 0%, rgba(50,214,196,0.14), transparent 55%)"
       )(props),
-      color: mode("#1e293b", "#e5eefc")(props),
-      fontFamily: "Inter, system-ui, sans-serif",
+      backgroundAttachment: "fixed",
+      backgroundRepeat: "no-repeat",
+      color: mode("#1d1d1f", "#f5f5f7")(props),
+      fontFamily: "Figtree, system-ui, sans-serif",
       WebkitFontSmoothing: "antialiased",
       overflowX: "hidden",
     },
     "::selection": {
-      background: mode("#9cc7f2", "#284b7a")(props),
-      color: mode("#0f172a", "#f8fafc")(props),
+      background: mode("#bfe0ff", "#123a63")(props),
+      color: mode("#0f172a", "#f5f5f7")(props),
     },
   }),
 };
 
 const components = {
   Heading: {
+    baseStyle: {
+      letterSpacing: "-0.01em",
+    },
     variants: {
-      "section-title": {
-        fontFamily: "Space Grotesk, sans-serif",
+      "section-title": (props) => ({
+        fontFamily: "Manrope, sans-serif",
         fontSize: 14,
         fontWeight: 700,
         letterSpacing: "0.14em",
@@ -36,13 +42,33 @@ const components = {
         marginBottom: 4,
         paddingLeft: 3,
         borderLeft: "4px solid",
-        borderColor: mode("#2bb3a3", "#60c5ff"),
-      },
+        borderColor: mode("#0071e3", "#32d6c4")(props),
+      }),
+      "page-title": (props) =>
+        props.colorMode === "dark"
+          ? {
+              fontFamily: "Manrope, sans-serif",
+              fontSize: { base: "34px", md: "50px" },
+              fontWeight: 800,
+              lineHeight: 1.06,
+              letterSpacing: "-0.02em",
+              bgGradient: "linear(120deg, #ffffff, #cfe9ff 55%, #8fd6ff)",
+              bgClip: "text",
+              color: "transparent",
+            }
+          : {
+              fontFamily: "Manrope, sans-serif",
+              fontSize: { base: "34px", md: "50px" },
+              fontWeight: 800,
+              lineHeight: 1.06,
+              letterSpacing: "-0.02em",
+              color: "#1d1d1f",
+            },
     },
   },
   Link: {
     baseStyle: (props) => ({
-      color: mode("#2563eb", "#93d5ff")(props),
+      color: mode("#0071e3", "#5ec2ff")(props),
       fontWeight: 500,
       textUnderlineOffset: 3,
     }),
@@ -50,8 +76,8 @@ const components = {
 };
 
 const fonts = {
-  heading: "Space Grotesk, sans-serif",
-  body: "Inter, system-ui, sans-serif",
+  heading: "Manrope, sans-serif",
+  body: "Figtree, system-ui, sans-serif",
 };
 
 const colors = {
@@ -67,6 +93,21 @@ const colors = {
     700: "#2358b3",
     800: "#1e468c",
     900: "#1b3a70",
+  },
+  // Repointed from Chakra's default green-teal to the Pro Dark
+  // blue -> teal accent duotone, so every existing colorScheme="teal"
+  // usage (buttons, badges, tags, hover borders) picks it up for free.
+  teal: {
+    50: "#e9f4ff",
+    100: "#cde6ff",
+    200: "#9ecfff",
+    300: "#6cb6ff",
+    400: "#3d9dff",
+    500: "#0a84ff",
+    600: "#0868cc",
+    700: "#064e99",
+    800: "#043666",
+    900: "#021e3d",
   },
 };
 

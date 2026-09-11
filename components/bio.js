@@ -19,6 +19,6 @@ export const BioYear = styled.span`
   font-weight: bold;
   padding: 0.2rem 0.65rem;
   border-radius: 999px;
-  background: rgba(56, 189, 248, 0.14);
+  background: linear-gradient(135deg, rgba(10, 132, 255, 0.18), rgba(50, 214, 196, 0.18));
   color: inherit;
 `;

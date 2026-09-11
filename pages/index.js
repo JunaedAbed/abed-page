@@ -68,13 +68,13 @@ const Page = () => {
                     mb={12}
                     bg={useColorModeValue(
                         "linear-gradient(135deg, rgba(255,255,255,0.94) 0%, rgba(234,246,255,0.98) 100%)",
-                        "linear-gradient(135deg, rgba(15,23,42,0.96) 0%, rgba(17,24,39,0.92) 100%)"
+                        "linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)"
                     )}
                     border="1px solid"
-                    borderColor={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+                    borderColor={useColorModeValue("blackAlpha.100", "whiteAlpha.200")}
                     boxShadow={useColorModeValue(
                         "0 24px 72px rgba(15, 23, 42, 0.10)",
-                        "0 24px 72px rgba(0, 0, 0, 0.35)"
+                        "0 24px 72px rgba(0, 0, 0, 0.5)"
                     )}
                 >
                     <Box
@@ -84,8 +84,8 @@ const Page = () => {
                         h="260px"
                         borderRadius="full"
                         bg={useColorModeValue(
-                            "rgba(56,189,248,0.18)",
-                            "rgba(59,130,246,0.18)"
+                            "rgba(10,132,255,0.18)",
+                            "rgba(10,132,255,0.3)"
                         )}
                         filter="blur(16px)"
                     />
@@ -96,8 +96,8 @@ const Page = () => {
                         h="240px"
                         borderRadius="full"
                         bg={useColorModeValue(
-                            "rgba(34,197,94,0.12)",
-                            "rgba(16,185,129,0.14)"
+                            "rgba(50,214,196,0.14)",
+                            "rgba(50,214,196,0.22)"
                         )}
                         filter="blur(18px)"
                     />
@@ -205,15 +205,15 @@ const Page = () => {
                             <Box
                                 p={3}
                                 borderRadius="32px"
-                                bg={useColorModeValue("whiteAlpha.900", "blackAlpha.300")}
+                                bg={useColorModeValue("whiteAlpha.900", "rgba(255,255,255,0.04)")}
                                 border="1px solid"
                                 borderColor={useColorModeValue(
                                     "blackAlpha.100",
-                                    "whiteAlpha.100"
+                                    "whiteAlpha.200"
                                 )}
                                 boxShadow={useColorModeValue(
                                     "0 18px 42px rgba(15, 23, 42, 0.14)",
-                                    "0 18px 42px rgba(0, 0, 0, 0.28)"
+                                    "0 0 0 1px rgba(10,132,255,0.25), 0 24px 60px rgba(0, 0, 0, 0.5)"
                                 )}
                                 w={{ base: "full", md: "90%" }}
                             >

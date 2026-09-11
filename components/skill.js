@@ -27,7 +27,7 @@ const Skill = styled.ul`
         width: 0.5rem;
         height: 0.5rem;
         border-radius: 999px;
-        background: linear-gradient(135deg, #38b2ac 0%, #60a5fa 100%);
+        background: linear-gradient(135deg, #0a84ff 0%, #32d6c4 100%);
         transform: translateY(-50%);
       }
     }

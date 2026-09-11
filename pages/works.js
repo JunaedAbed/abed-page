@@ -41,13 +41,13 @@ const Works = () => {
           borderRadius="34px"
           bg={useColorModeValue(
             "linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(244,249,255,0.99) 55%, rgba(232,242,255,0.96) 100%)",
-            "linear-gradient(135deg, rgba(15,23,42,0.96) 0%, rgba(17,24,39,0.92) 55%, rgba(15,23,42,0.90) 100%)"
+            "linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 55%, rgba(255,255,255,0.03) 100%)"
           )}
           border="1px solid"
-          borderColor={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+          borderColor={useColorModeValue("blackAlpha.100", "whiteAlpha.200")}
           boxShadow={useColorModeValue(
             "0 24px 72px rgba(15, 23, 42, 0.12)",
-            "0 24px 72px rgba(0, 0, 0, 0.34)"
+            "0 24px 72px rgba(0, 0, 0, 0.5)"
           )}
         >
           <Box
@@ -57,8 +57,8 @@ const Works = () => {
             h="220px"
             borderRadius="full"
             bg={useColorModeValue(
-              "rgba(63, 140, 255, 0.18)",
-              "rgba(96, 197, 255, 0.12)"
+              "rgba(10, 132, 255, 0.18)",
+              "rgba(10, 132, 255, 0.3)"
             )}
             filter="blur(18px)"
           />
@@ -69,8 +69,8 @@ const Works = () => {
             h="200px"
             borderRadius="full"
             bg={useColorModeValue(
-              "rgba(45, 179, 163, 0.16)",
-              "rgba(45, 179, 163, 0.14)"
+              "rgba(50, 214, 196, 0.16)",
+              "rgba(50, 214, 196, 0.2)"
             )}
             filter="blur(18px)"
           />
@@ -88,7 +88,7 @@ const Works = () => {
                 <TagLabel>Selected portfolio</TagLabel>
               </Tag>
 
-              <Heading as="h2" fontSize={{ base: 30, md: 44 }} lineHeight={1.05}>
+              <Heading as="h2" variant="page-title" fontSize={{ base: 30, md: 44 }} lineHeight={1.05}>
                 Work I&apos;ve shipped across products, platforms, and teams.
               </Heading>
             </Box>

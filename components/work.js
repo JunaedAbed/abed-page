@@ -16,12 +16,13 @@ export const Title = ({ children }) => (
     mb={6}
     p={{ base: 4, md: 5 }}
     borderRadius="24px"
-    bg={useColorModeValue("whiteAlpha.800", "whiteAlpha.100")}
+    bg={useColorModeValue("rgba(255,255,255,0.8)", "rgba(255,255,255,0.045)")}
+    backdropFilter="blur(20px)"
     border="1px solid"
-    borderColor={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+    borderColor={useColorModeValue("blackAlpha.100", "whiteAlpha.200")}
     boxShadow={useColorModeValue(
       "0 16px 40px rgba(15, 23, 42, 0.08)",
-      "0 16px 40px rgba(0, 0, 0, 0.22)"
+      "0 20px 50px rgba(0, 0, 0, 0.45)"
     )}
   >
     <Box display="flex" alignItems="center" flexWrap="wrap" gap={2}>
@@ -44,32 +45,32 @@ export const Title = ({ children }) => (
 
 export const WorkImage = ({ src, alt }) => (
   <Image
-    borderRadius="16px"
+    borderRadius="20px"
     w="full"
     maxH={{ base: "180px", lg: "none" }}
     objectFit="cover"
     src={src}
     alt={alt}
     border="1px solid"
-    borderColor={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+    borderColor={useColorModeValue("blackAlpha.100", "whiteAlpha.200")}
     boxShadow={useColorModeValue(
       "0 8px 24px rgba(15, 23, 42, 0.08)",
-      "0 8px 24px rgba(0, 0, 0, 0.24)"
+      "0 8px 28px rgba(0, 0, 0, 0.4)"
     )}
   />
 );
 
 export const WorkImageApp = ({ src, alt }) => (
   <Image
-    borderRadius="16px"
+    borderRadius="20px"
     w="full"
     src={src}
     alt={alt}
     border="1px solid"
-    borderColor={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+    borderColor={useColorModeValue("blackAlpha.100", "whiteAlpha.200")}
     boxShadow={useColorModeValue(
       "0 8px 24px rgba(15, 23, 42, 0.08)",
-      "0 8px 24px rgba(0, 0, 0, 0.24)"
+      "0 8px 28px rgba(0, 0, 0, 0.4)"
     )}
   />
 );
@@ -89,12 +90,13 @@ export const WorkInfoPanel = ({ children }) => (
   <Box
     p={{ base: 4, md: 6 }}
     borderRadius="20px"
-    bg={useColorModeValue("whiteAlpha.900", "whiteAlpha.50")}
+    bg={useColorModeValue("rgba(255,255,255,0.85)", "rgba(255,255,255,0.045)")}
+    backdropFilter="blur(20px)"
     border="1px solid"
-    borderColor={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+    borderColor={useColorModeValue("blackAlpha.100", "whiteAlpha.200")}
     boxShadow={useColorModeValue(
       "0 8px 32px rgba(15, 23, 42, 0.07)",
-      "0 8px 32px rgba(0, 0, 0, 0.22)"
+      "0 8px 32px rgba(0, 0, 0, 0.4)"
     )}
     position={{ base: "static", lg: "sticky" }}
     top={{ lg: "96px" }}
