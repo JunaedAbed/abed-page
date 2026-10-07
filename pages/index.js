@@ -42,11 +42,13 @@ const Page = () => {
     const skills = [
         "TypeScript",
         "Python",
+        "PHP",
         "C#",
         "Dart",
         ".NET",
         "NestJs",
         "NextJS",
+        "Laravel",
         "Flutter",
         "React",
         "Node.js",
@@ -244,13 +246,14 @@ const Page = () => {
                                 Work
                             </Heading>
                             <Paragraph>
-                                I&apos;m currently working as a Senior Executive Software Engineer
-                                at{" "}
-                                <Link href="https://www.neoscoder.com/" target="_blank">
-                                    Neoscoder Ltd
+                                I&apos;m currently working as a Software Engineer at{" "}
+                                <Link href="https://www.amefird.com/" target="_blank">
+                                    American &amp; Efird (Bangladesh) Ltd.
                                 </Link>
-                                . I like building systems that stay fast, readable, and easy to
-                                extend as the product grows.
+                                , building an AI-powered chatbot with Android and iOS companion
+                                apps, along with internal tools for the IT Innovation team. I like
+                                building systems that stay fast, readable, and easy to extend as
+                                the product grows.
                             </Paragraph>
                             <Box mt={5}>
                                 <NextLink href="/works" legacyBehavior>
@@ -284,24 +287,30 @@ const Page = () => {
                                 </Link>
                             </BioSection>
                             <BioSection>
-                                <BioYear>Oct 2022 to May 2024</BioYear>ERP and Android
+                                <BioYear>Oct 2022 to May 2024</BioYear>Mobile Apps
                                 Developer at{" "}
                                 <Link href="https://www.akijtakafullife.com.bd/" target="_blank">
                                     Akij Takaful Life Insurance PLC.
                                 </Link>
                             </BioSection>
                             <BioSection>
-                                <BioYear>May 2024 to Nov 2024</BioYear>Senior Executive
-                                (Backend Developer) at{" "}
+                                <BioYear>May 2024 to Nov 2024</BioYear>Senior Software
+                                Developer at{" "}
                                 <Link href="https://www.akijventure.com/" target="_blank">
                                     Akij Venture Ltd.
                                 </Link>
                             </BioSection>
                             <BioSection>
-                                <BioYear>Nov 2024 to Present</BioYear>Senior Executive
-                                (Backend Developer) at{" "}
+                                <BioYear>Nov 2024 to Jun 2026</BioYear>Senior Software
+                                Developer at{" "}
                                 <Link href="https://www.neoscoder.com/" target="_blank">
                                     Neoscoder Ltd.
+                                </Link>
+                            </BioSection>
+                            <BioSection>
+                                <BioYear>Jun 2026 to Present</BioYear>Software Engineer at{" "}
+                                <Link href="https://www.amefird.com/" target="_blank">
+                                    American &amp; Efird (Bangladesh) Ltd.
                                 </Link>
                             </BioSection>
                         </Section>
