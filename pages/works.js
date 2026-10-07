@@ -16,6 +16,8 @@ import { WorkGridItem } from "../components/grid-item";
 import Layout from "../components/layouts/article";
 import Section from "../components/section";
 
+import thumbHris from "../public/images/works/hris.png";
+import thumbStoreSales from "../public/images/works/store-sales.png";
 import thumbFairValue from "../public/images/links/fair_value.png";
 import thumbMyAkijTakaful from "../public/images/links/my_akij_takaful.png";
 import thumbCarpod from "../public/images/works/carpod.png";
@@ -135,7 +137,7 @@ const Works = () => {
                     >
                       <Text fontWeight="semibold">Professional works</Text>
                       <Tag borderRadius="full" colorScheme="teal">
-                        2
+                        4
                       </Tag>
                     </Flex>
                   </Link>
@@ -188,6 +190,20 @@ const Works = () => {
         </Heading>
 
         <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap={6} alignItems="stretch">
+          <Section delay={0.1}>
+            <WorkGridItem
+              id="store-sales"
+              title="Store Sales"
+              thumbnail={thumbStoreSales}
+            >
+              A SaaS platform for sales and inventory management.
+            </WorkGridItem>
+          </Section>
+          <Section delay={0.1}>
+            <WorkGridItem id="hris" title="HRIS" thumbnail={thumbHris}>
+              HR management system with role-based access and automated workflows.
+            </WorkGridItem>
+          </Section>
           <Section delay={0.1}>
             <WorkGridItem
               id="my-akij-takaful"
