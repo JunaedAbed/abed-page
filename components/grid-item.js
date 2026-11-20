@@ -4,6 +4,7 @@ import {
   AspectRatio,
   Box,
   LinkBox,
+  Tag,
   LinkOverlay,
   Text,
   useColorModeValue,
@@ -51,6 +52,17 @@ const DescriptionText = ({ children }) => (
   </Text>
 );
 
+const StackTags = ({ stack }) =>
+  stack && stack.length ? (
+    <Box mt={3} display="flex" flexWrap="wrap" gap={2}>
+      {stack.map((tech) => (
+        <Tag key={tech} size="sm" borderRadius="full" colorScheme="teal" variant="subtle">
+          {tech}
+        </Tag>
+      ))}
+    </Box>
+  ) : null;
+
 export const GridItem = ({ children, href, title, thumbnail }) => (
   <Box w="100%" textAlign="left">
     <LinkBox {...useCardStyle()}>
@@ -72,7 +84,7 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
   </Box>
 );
 
-export const WorkGridItem = ({ children, id, title, thumbnail }) => (
+export const WorkGridItem = ({ children, id, title, thumbnail, stack }) => (
   <Box w="100%" textAlign="left">
     <NextLink href={`/works/${id}`} legacyBehavior>
       <LinkBox {...useCardStyle()}>
@@ -89,6 +101,7 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
           <TitleText>{title}</TitleText>
         </LinkOverlay>
         <DescriptionText>{children}</DescriptionText>
+        <StackTags stack={stack} />
       </LinkBox>
     </NextLink>
   </Box>

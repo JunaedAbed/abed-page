@@ -10,23 +10,17 @@ import {
     Icon,
     Image,
     Link,
+    ListItem,
     SimpleGrid,
     Tag,
     TagLabel,
     Text,
+    UnorderedList,
     useColorModeValue,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import {
-    IoLogoDiscord,
-    IoLogoFacebook,
-    IoLogoGithub,
-    IoLogoInstagram,
-    IoLogoLinkedin,
-    IoLogoPinterest,
-    IoLogoTwitter,
-    IoMail,
-} from "react-icons/io5";
+import { IoLogoGithub, IoLogoLinkedin, IoMail } from "react-icons/io5";
+import { SiOrcid } from "react-icons/si";
 import { BioSection, BioYear } from "../components/bio";
 import { GridItem } from "../components/grid-item";
 import Layout from "../components/layouts/article";
@@ -39,23 +33,104 @@ import thumbSweetsCloud from "../public/images/links/sweets-cloud.png";
 import thumbYouTube from "../public/images/links/YouTube.png";
 
 const Page = () => {
-    const skills = [
-        "TypeScript",
-        "Python",
-        "PHP",
-        "C#",
-        "Dart",
-        ".NET",
-        "NestJs",
-        "NextJS",
-        "Laravel",
+    const mutedColor = useColorModeValue("gray.600", "gray.400");
+
+    const coreSkills = [
         "Flutter",
+        "Dart",
+        "C#",
+        "ASP.NET Core",
+        "MSSQL",
+        "LLM / RAG integration",
+    ];
+    const alsoUsed = [
+        "NestJS",
+        "TypeScript",
+        "Laravel",
+        "PHP",
         "React",
-        "Node.js",
+        "Next.js",
+        "MongoDB",
         "MySQL",
         "Firebase",
-        "MSSQL",
-        "MongoDB",
+        "Python",
+    ];
+
+    const publications = [
+        {
+            title: "Federated Learning Approaches in Precision Agriculture: A Systematic Review of Current Trends, Challenges, and Opportunities.",
+            authors: [
+                "S. M. Shawon",
+                "I. A. Adan",
+                "M. Moniruzzaman",
+                "O. H. Sinan",
+                "M. J. Abed",
+                "M. A. Qwaid",
+                "M. T. Sarker",
+                "H. B. A. Karim",
+            ],
+            venue: "IEEE Access, 2026.",
+            doi: "10.1109/ACCESS.2026.3667548",
+            summary:
+                "A review of how federated learning lets farms and agri-tech systems train shared AI models without pooling their private data.",
+        },
+        {
+            title: "Integrating Federated Learning and Explainable AI for Plant Disease Detection: A Systematic Review of Recent Advances in Precision Agriculture.",
+            authors: [
+                "S. M. Shawon",
+                "F. L. Niha",
+                "O. H. Sinan",
+                "M. J. Abed",
+                "M. A. Qwaid",
+                "M. T. Sarker",
+                "H. T. Zubair",
+            ],
+            venue: "International Journal of Computational Intelligence Systems (Springer), 2026.",
+            doi: "10.1007/s44196-026-01219-w",
+            summary:
+                "A review of combining federated learning with explainable AI so plant-disease detection models stay private and their predictions stay understandable.",
+        },
+    ];
+
+    const aeBullets = [
+        <>
+            Built <strong>Nexoura AI</strong>, the company&apos;s AI chatbot, with an
+            ASP.NET Core backend and Flutter companion apps on Android and iOS.
+        </>,
+        <>
+            Shipped <strong>chat-based order tracking</strong>: customers ask about an
+            order in plain language, and the bot finds their customer codes, pulls out
+            the order ID, calls the right country&apos;s order API and returns item
+            status and invoice numbers.
+        </>,
+        <>
+            Delivered <strong>A&amp;E Digital</strong>, a Flutter product catalog and
+            sales app with an admin panel. It has <strong>100+ users</strong> in its
+            first phase and is built for global rollout: live in Bangladesh, with
+            Europe next.
+        </>,
+        <>
+            Built <strong>multi-country sales order entry</strong>, now live, with
+            per-country screens and API routing, draft and confirmed order states, and
+            an approval workflow with a dedicated approver role and email
+            notifications.
+        </>,
+        <>
+            Restructured the backend into feature modules and built JWT guest auth with
+            refresh tokens, shared by the mobile and web clients.
+        </>,
+        <>
+            Building the <strong>LFA approval workflow</strong> in the company HRIS.
+        </>,
+        <>
+            Built an ASP.NET Core web portal for app store compliance (privacy-policy
+            admin, account deletion). Set up the company&apos;s Google Play and Apple
+            Developer organization accounts with the global IT team.
+        </>,
+        <>
+            Maintain a legacy Java Android app (TLS fixes, AndroidX migration,
+            Gradle/JDK upgrades). Mentor one direct report and run stakeholder demos.
+        </>,
     ];
 
     return (
@@ -118,7 +193,7 @@ const Page = () => {
                                 mb={4}
                                 bg={useColorModeValue("whiteAlpha.800", "whiteAlpha.200")}
                             >
-                                <TagLabel>Software Engineer</TagLabel>
+                                <TagLabel>Open to remote roles</TagLabel>
                             </Tag>
 
                             <Heading as="h2" variant="page-title">
@@ -129,17 +204,18 @@ const Page = () => {
                                 mt={4}
                                 mb={2}
                                 fontSize={{ base: "lg", md: "xl" }}
-                                color={useColorModeValue("gray.700", "gray.300")}
+                                fontWeight="semibold"
+                                color={useColorModeValue("gray.800", "gray.100")}
                                 maxW="42rem"
                             >
-                                Building clean, scalable software for web and mobile.
+                                Flutter + .NET Engineer | Shipping AI features in
+                                production mobile apps | 4+ yrs | Remote
                             </Text>
 
-                            <Paragraph mt={8} >
-                                I&apos;m a software engineer passionate about building high-performance,
-                                scalable backend systems and delivering exceptional web and mobile applications.
-                                I thrive on creating clean, maintainable codebases that balance speed, reliability,
-                                and long-term maintainability.
+                            <Paragraph mt={6}>
+                                I build mobile apps and APIs that put AI in front of real
+                                users: Flutter on the front, ASP.NET Core on the back,
+                                LLMs in between.
                             </Paragraph>
 
                             <HStack spacing={3} mt={6} flexWrap="wrap" justify="flex-start">
@@ -158,7 +234,16 @@ const Page = () => {
                                 </Button>
                             </HStack>
 
-                            <SimpleGrid columns={{ base: 1, sm: 3 }} spacing={3} mt={8}>
+                            <Text
+                                mt={5}
+                                fontSize="sm"
+                                color={useColorModeValue("gray.600", "gray.400")}
+                            >
+                                Open to remote roles · Dhaka (UTC+6), overlaps EU and US
+                                mornings.
+                            </Text>
+
+                            <SimpleGrid columns={{ base: 1, sm: 3 }} spacing={3} mt={6}>
                                 <Box
                                     p={4}
                                     borderRadius="20px"
@@ -168,9 +253,9 @@ const Page = () => {
                                         fontSize="sm"
                                         color={useColorModeValue("gray.600", "gray.400")}
                                     >
-                                        Focus
+                                        Mobile
                                     </Text>
-                                    <Text fontWeight="semibold">Backend systems</Text>
+                                    <Text fontWeight="semibold">Flutter, Android + iOS</Text>
                                 </Box>
                                 <Box
                                     p={4}
@@ -181,9 +266,9 @@ const Page = () => {
                                         fontSize="sm"
                                         color={useColorModeValue("gray.600", "gray.400")}
                                     >
-                                        Delivery
+                                        Backend
                                     </Text>
-                                    <Text fontWeight="semibold">Web and mobile</Text>
+                                    <Text fontWeight="semibold">ASP.NET Core, MSSQL</Text>
                                 </Box>
                                 <Box
                                     p={4}
@@ -194,9 +279,9 @@ const Page = () => {
                                         fontSize="sm"
                                         color={useColorModeValue("gray.600", "gray.400")}
                                     >
-                                        Approach
+                                        AI
                                     </Text>
-                                    <Text fontWeight="semibold">Fast, maintainable</Text>
+                                    <Text fontWeight="semibold">LLM / RAG in production</Text>
                                 </Box>
                             </SimpleGrid>
                         </Box>
@@ -246,15 +331,21 @@ const Page = () => {
                                 Work
                             </Heading>
                             <Paragraph>
-                                I&apos;m currently working as a Software Engineer at{" "}
+                                Software Engineer, IT Innovation at{" "}
                                 <Link href="https://www.amefird.com/" target="_blank">
                                     American &amp; Efird (Bangladesh) Ltd.
-                                </Link>
-                                , building an AI-powered chatbot with Android and iOS companion
-                                apps, along with internal tools for the IT Innovation team. I like
-                                building systems that stay fast, readable, and easy to extend as
-                                the product grows.
+                                </Link>{" "}
+                                (Jun 2026 to Present). Building Nexoura AI and A&amp;E
+                                Digital: an AI chatbot and a Flutter sales app used by
+                                100+ people, with chat-based order tracking and
+                                multi-country order entry live in Bangladesh and rolling
+                                out to Europe.
                             </Paragraph>
+                            <UnorderedList mt={4} spacing={2} pl={1} fontSize="sm">
+                                {aeBullets.map((bullet, index) => (
+                                    <ListItem key={index}>{bullet}</ListItem>
+                                ))}
+                            </UnorderedList>
                             <Box mt={5}>
                                 <NextLink href="/works" legacyBehavior>
                                     <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
@@ -262,6 +353,82 @@ const Page = () => {
                                     </Button>
                                 </NextLink>
                             </Box>
+                        </Section>
+
+                        <Section delay={0.25}>
+                            <Heading as="h3" variant="section-title">
+                                Education
+                            </Heading>
+                            <BioSection>
+                                <BioYear>2018 to 2022</BioYear>
+                                <Box>
+                                    <Text fontWeight="semibold">
+                                        B.Sc. in Computer Science &amp; Engineering,{" "}
+                                        <Link href="https://www.bracu.ac.bd/" target="_blank">
+                                            BRAC University
+                                        </Link>
+                                    </Text>
+                                    <Text fontSize="sm" mt={1}>
+                                        Thesis:{" "}
+                                        <em>
+                                            Demand forecasting in supply chains using machine
+                                            learning and neural networks
+                                        </em>
+                                    </Text>
+                                </Box>
+                            </BioSection>
+                        </Section>
+
+                        <Section delay={0.28}>
+                            <Heading as="h3" variant="section-title">
+                                Publications
+                            </Heading>
+                            {publications.map((pub) => (
+                                <BioSection key={pub.doi}>
+                                    <Box>
+                                        <Text fontWeight="semibold">{pub.title}</Text>
+                                        <Text fontSize="sm" mt={1}>
+                                            {pub.authors.map((author, index) => (
+                                                <span key={author}>
+                                                    {author === "M. J. Abed" ? (
+                                                        <strong>{author}</strong>
+                                                    ) : (
+                                                        author
+                                                    )}
+                                                    {index < pub.authors.length - 1 ? ", " : ". "}
+                                                </span>
+                                            ))}
+                                            <em>{pub.venue}</em> doi:
+                                            <Link
+                                                href={`https://doi.org/${pub.doi}`}
+                                                target="_blank"
+                                            >
+                                                {pub.doi}
+                                            </Link>
+                                        </Text>
+                                        <Text
+                                            fontSize="sm"
+                                            mt={2}
+                                            color={mutedColor}
+                                        >
+                                            {pub.summary}
+                                        </Text>
+                                    </Box>
+                                </BioSection>
+                            ))}
+                            <Link
+                                href="https://orcid.org/0009-0009-7237-7505"
+                                target="_blank"
+                            >
+                                <Button
+                                    variant="outline"
+                                    colorScheme="teal"
+                                    size="sm"
+                                    leftIcon={<Icon as={SiOrcid} />}
+                                >
+                                    View on ORCID
+                                </Button>
+                            </Link>
                         </Section>
 
                         <Section delay={0.3}>
@@ -348,10 +515,35 @@ const Page = () => {
                             <Heading as="h3" variant="section-title">
                                 Skills
                             </Heading>
+                            <Text
+                                mt={2}
+                                fontSize="sm"
+                                fontWeight="bold"
+                                textTransform="uppercase"
+                                letterSpacing="0.1em"
+                            >
+                                Core
+                            </Text>
                             <Skill>
                                 <ul className="skills-list">
-                                    {skills.map((skill, index) => (
-                                        <li key={index}>{skill}</li>
+                                    {coreSkills.map((skill) => (
+                                        <li key={skill}>{skill}</li>
+                                    ))}
+                                </ul>
+                            </Skill>
+                            <Text
+                                mt={6}
+                                fontSize="sm"
+                                fontWeight="bold"
+                                textTransform="uppercase"
+                                letterSpacing="0.1em"
+                            >
+                                Also used
+                            </Text>
+                            <Skill>
+                                <ul className="skills-list">
+                                    {alsoUsed.map((skill) => (
+                                        <li key={skill}>{skill}</li>
                                     ))}
                                 </ul>
                             </Skill>
@@ -398,62 +590,18 @@ const Page = () => {
                                         @mdjunaedabed
                                     </Button>
                                 </Link>
-                                <Link href="https://www.facebook.com/junaed.abed" target="_blank">
-                                    <Button
-                                        variant="outline"
-                                        colorScheme="teal"
-                                        leftIcon={<Icon as={IoLogoFacebook} />}
-                                        w="full"
-                                        justifyContent="flex-start"
-                                    >
-                                        @junaed.abed
-                                    </Button>
-                                </Link>
-                                <Link href="https://www.instagram.com/mugdho.abed/" target="_blank">
-                                    <Button
-                                        variant="outline"
-                                        colorScheme="teal"
-                                        leftIcon={<Icon as={IoLogoInstagram} />}
-                                        w="full"
-                                        justifyContent="flex-start"
-                                    >
-                                        @mugdho.abed
-                                    </Button>
-                                </Link>
-                                <Link href="https://twitter.com/junaed_abed_" target="_blank">
-                                    <Button
-                                        variant="outline"
-                                        colorScheme="teal"
-                                        leftIcon={<Icon as={IoLogoTwitter} />}
-                                        w="full"
-                                        justifyContent="flex-start"
-                                    >
-                                        @junaed_abed_
-                                    </Button>
-                                </Link>
-                                <Link href="https://www.pinterest.com/jmugdho/" target="_blank">
-                                    <Button
-                                        variant="outline"
-                                        colorScheme="teal"
-                                        leftIcon={<Icon as={IoLogoPinterest} />}
-                                        w="full"
-                                        justifyContent="flex-start"
-                                    >
-                                        @jmugdho
-                                    </Button>
-                                </Link>
                                 <Link
-                                    href="https://discordapp.com/users/708306618663698432/"
+                                    href="https://orcid.org/0009-0009-7237-7505"
                                     target="_blank"
                                 >
                                     <Button
                                         variant="outline"
                                         colorScheme="teal"
-                                        leftIcon={<Icon as={IoLogoDiscord} />}
+                                        leftIcon={<Icon as={SiOrcid} />}
                                         w="full"
                                         justifyContent="flex-start"
                                     >
-                                        @Junaed Abed#6767
+                                        ORCID
                                     </Button>
                                 </Link>
                             </SimpleGrid>
