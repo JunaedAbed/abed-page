@@ -16,6 +16,8 @@ import { WorkGridItem } from "../components/grid-item";
 import Layout from "../components/layouts/article";
 import Section from "../components/section";
 
+import thumbNexoura from "../public/images/works/nexoura-ai.png";
+import thumbAeDigital from "../public/images/works/ae-digital.png";
 import thumbHris from "../public/images/works/hris.png";
 import thumbStoreSales from "../public/images/works/store-sales.png";
 import thumbFairValue from "../public/images/links/fair_value.png";
@@ -25,7 +27,6 @@ import thumbCovidTracker from "../public/images/works/covid-tracker.png";
 import thumbExpTracker from "../public/images/works/expense-tracker.png";
 import thumbInstaBot from "../public/images/works/insta-bot.png";
 
-import thumbScholarBot from "../public/images/works/scholar-bot.png";
 import thumbSweetsCloud from "../public/images/works/sweets-cloud.png";
 import thumbTodo from "../public/images/works/todo.png";
 import thumbWeatherApp from "../public/images/works/weather.png";
@@ -137,7 +138,7 @@ const Works = () => {
                     >
                       <Text fontWeight="semibold">Professional works</Text>
                       <Tag borderRadius="full" colorScheme="teal">
-                        4
+                        6
                       </Tag>
                     </Flex>
                   </Link>
@@ -156,11 +157,11 @@ const Works = () => {
                     >
                       <Text fontWeight="semibold">Personal works</Text>
                       <Tag borderRadius="full" colorScheme="blue">
-                        5
+                        2
                       </Tag>
                     </Flex>
                   </Link>
-                  <Link href="#old-works" _hover={{ textDecoration: "none" }}>
+                  <Link href="#archive" _hover={{ textDecoration: "none" }}>
                     <Flex
                       justify="space-between"
                       align="center"
@@ -173,9 +174,9 @@ const Works = () => {
                       transition="transform 0.2s ease, border-color 0.2s ease"
                       _hover={{ transform: "translateX(4px)", borderColor: "teal.300" }}
                     >
-                      <Text fontWeight="semibold">Older builds</Text>
+                      <Text fontWeight="semibold">Archive</Text>
                       <Tag borderRadius="full" colorScheme="cyan">
-                        3
+                        5
                       </Tag>
                     </Flex>
                   </Link>
@@ -192,15 +193,41 @@ const Works = () => {
         <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap={6} alignItems="stretch">
           <Section delay={0.1}>
             <WorkGridItem
+              id="nexoura-ai"
+              title="Nexoura AI"
+              thumbnail={thumbNexoura}
+              stack={["Flutter", "ASP.NET Core", "MSSQL", "LLM"]}
+            >
+              The company AI chatbot at American &amp; Efird, with chat-based order tracking across country order APIs.
+            </WorkGridItem>
+          </Section>
+          <Section delay={0.1}>
+            <WorkGridItem
+              id="ae-digital"
+              title="A&amp;E Digital"
+              thumbnail={thumbAeDigital}
+              stack={["Flutter", "ASP.NET Core", "MSSQL"]}
+            >
+              Flutter product catalog and sales app with an admin panel and multi-country order entry. 100+ users in phase one.
+            </WorkGridItem>
+          </Section>
+          <Section delay={0.1}>
+            <WorkGridItem
               id="store-sales"
               title="Store Sales"
               thumbnail={thumbStoreSales}
+              stack={["NestJS", "MySQL"]}
             >
               A SaaS platform for sales and inventory management.
             </WorkGridItem>
           </Section>
           <Section delay={0.1}>
-            <WorkGridItem id="hris" title="HRIS" thumbnail={thumbHris}>
+            <WorkGridItem
+              id="hris"
+              title="HRIS"
+              thumbnail={thumbHris}
+              stack={["NestJS", "MySQL"]}
+            >
               HR management system with role-based access and automated workflows.
             </WorkGridItem>
           </Section>
@@ -209,6 +236,7 @@ const Works = () => {
               id="my-akij-takaful"
               title="My Akij Takaful"
               thumbnail={thumbMyAkijTakaful}
+              stack={["Flutter", "ASP.NET", "MSSQL"]}
             >
               A mobile app for Akij Takaful Life Insurance users.
             </WorkGridItem>
@@ -218,6 +246,7 @@ const Works = () => {
               id="fair-value"
               title="Fair Value"
               thumbnail={thumbFairValue}
+              stack={["Flutter", "NestJS"]}
             >
               Multi-vendor e-commerce app.
             </WorkGridItem>
@@ -237,43 +266,19 @@ const Works = () => {
               id="sweets-cloud"
               title="Sweets Cloud"
               thumbnail={thumbSweetsCloud}
+              stack={["ReactJS", "API"]}
             >
               An e-commerce website for sweets.
             </WorkGridItem>
           </Section>
-
           <Section delay={0.5}>
             <WorkGridItem
-              id="covid-tracker"
-              title="Covid Tracker"
-              thumbnail={thumbCovidTracker}
+              id="carpod"
+              title="CarPod"
+              thumbnail={thumbCarpod}
+              stack={["PHP", "Laravel", "MySQL"]}
             >
-              A Covid Statistics app with worldwide and countrywise cases,
-              recovered and deaths details.
-            </WorkGridItem>
-          </Section>
-
-          <Section delay={0.6}>
-            <WorkGridItem id="carpod" title="CarPod" thumbnail={thumbCarpod}>
-              CarPod is an online car showroom. It is built on Laravel
-              framework.
-            </WorkGridItem>
-          </Section>
-
-          <Section delay={0.7}>
-            <WorkGridItem id="todo-app" title="Todo App" thumbnail={thumbTodo}>
-              A todo app built on React-Native framework.
-            </WorkGridItem>
-          </Section>
-
-          <Section delay={0.8}>
-            <WorkGridItem
-              id="scholar-bot"
-              title="Scholar Bot"
-              thumbnail={thumbScholarBot}
-            >
-              A discord bot to Google search and to download thesis papers via
-              Sci-Hub.
+              CarPod is an online car showroom. It is built on Laravel framework.
             </WorkGridItem>
           </Section>
         </SimpleGrid>
@@ -281,39 +286,60 @@ const Works = () => {
         <Section delay={0.9}>
           <Divider my={6} />
 
-          <Heading id="old-works" as="h3" fontSize={{ base: 20, md: 24 }} mb={5}>
-            Old Works
+          <Heading id="archive" as="h3" fontSize={{ base: 20, md: 24 }} mb={5}>
+            Archive
           </Heading>
         </Section>
 
         <SimpleGrid columns={{ base: 1, md: 2, xl: 3 }} gap={6} alignItems="stretch">
           <Section delay={0.9}>
             <WorkGridItem
-              id="insta-bot"
-              title="Instagram Bot"
-              thumbnail={thumbInstaBot}
+              id="covid-tracker"
+              title="Covid Tracker"
+              thumbnail={thumbCovidTracker}
+              stack={["ReactJS", "API"]}
             >
-              Instagram non-followers finder with email system.
+              A Covid Statistics app with worldwide and countrywise cases, recovered and deaths details.
             </WorkGridItem>
           </Section>
-
+          <Section delay={0.9}>
+            <WorkGridItem
+              id="todo-app"
+              title="Todo App"
+              thumbnail={thumbTodo}
+              stack={["React Native", "Firebase"]}
+            >
+              A todo app built on React-Native framework.
+            </WorkGridItem>
+          </Section>
           <Section delay={0.9}>
             <WorkGridItem
               id="weather-app"
               title="Weather App"
               thumbnail={thumbWeatherApp}
+              stack={["React Native", "Firebase"]}
             >
               It is a simple weather app built on React-Native framework.
             </WorkGridItem>
           </Section>
-
           <Section delay={0.9}>
             <WorkGridItem
               id="expense-tracker"
               title="Expense Tracker"
               thumbnail={thumbExpTracker}
+              stack={["NodeJS", "ReactJS"]}
             >
               Expense Tracker built on ReactJs framework.
+            </WorkGridItem>
+          </Section>
+          <Section delay={0.9}>
+            <WorkGridItem
+              id="insta-bot"
+              title="Instagram Bot"
+              thumbnail={thumbInstaBot}
+              stack={["Python"]}
+            >
+              Instagram non-followers finder with email system.
             </WorkGridItem>
           </Section>
         </SimpleGrid>
