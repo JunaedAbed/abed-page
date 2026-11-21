@@ -64,7 +64,7 @@ story = []
 story += [Paragraph("MD JUNAED ABED", name),
           Paragraph("Flutter + .NET Engineer | Shipping AI features in production mobile apps", role),
           Spacer(1, 3),
-          Paragraph("Niketon, Gulshan 1, Dhaka, Bangladesh &nbsp;|&nbsp; +880 1720480884 &nbsp;|&nbsp; junaed98m@gmail.com", contact),
+          Paragraph("Dhaka, Bangladesh &nbsp;|&nbsp; junaed98m@gmail.com", contact),
           Paragraph('<link href="https://www.linkedin.com/in/mdjunaedabed/">in/mdjunaedabed</link> &nbsp;|&nbsp; '
                     '<link href="https://github.com/JunaedAbed">github.com/JunaedAbed</link> &nbsp;|&nbsp; '
                     '<link href="https://orcid.org/0009-0009-7237-7505">orcid.org/0009-0009-7237-7505</link> &nbsp;|&nbsp; '
