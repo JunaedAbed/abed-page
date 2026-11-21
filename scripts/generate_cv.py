@@ -56,8 +56,7 @@ AE_BULLETS = [
     "Delivered <b>A&amp;E Digital</b>, a Flutter product catalog and sales app with an admin panel. It has <b>100+ users</b> in its first phase and is built for global rollout: live in Bangladesh, with Europe next.",
     "Built <b>multi-country sales order entry</b>, now live, with per-country screens and API routing, draft and confirmed order states, and an approval workflow with a dedicated approver role and email notifications.",
     "Restructured the backend into feature modules and built JWT guest auth with refresh tokens, shared by the mobile and web clients.",
-    "Building the <b>LFA approval workflow</b> in the company HRIS.",
-    "Built an ASP.NET Core web portal for app store compliance (privacy-policy admin, account deletion). Set up the company's Google Play and Apple Developer organization accounts with the global IT team.",
+    "Built the approvals module in A&amp;E Digital: leave and LFA approvals are live, single-price and bulk-price approvals are in progress, and 10+ more approval types are planned.",
     "Maintain a legacy Java Android app (TLS fixes, AndroidX migration, Gradle/JDK upgrades). Mentor one direct report and run stakeholder demos.",
 ]
 
