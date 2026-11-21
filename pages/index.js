@@ -94,14 +94,15 @@ const Page = () => {
 
     const aeBullets = [
         <>
-            Built <strong>Nexoura AI</strong>, the company&apos;s AI chatbot, with an
-            ASP.NET Core backend and Flutter companion apps on Android and iOS.
+            Maintain and extend <strong>Nexoura AI</strong>, the company&apos;s AI
+            chatbot (ASP.NET Core backend, Flutter companion apps on Android and
+            iOS), shipping new features end to end.
         </>,
         <>
-            Shipped <strong>chat-based order tracking</strong>: customers ask about an
-            order in plain language, and the bot finds their customer codes, pulls out
-            the order ID, calls the right country&apos;s order API and returns item
-            status and invoice numbers.
+            Added <strong>chat-based order tracking</strong> to Nexoura: customers
+            ask about an order in plain language, and the bot finds their customer
+            codes, pulls out the order ID, calls the right country&apos;s order API
+            and returns item status and invoice numbers.
         </>,
         <>
             Delivered <strong>A&amp;E Digital</strong>, a Flutter product catalog and
@@ -335,11 +336,11 @@ const Page = () => {
                                 <Link href="https://www.amefird.com/" target="_blank">
                                     American &amp; Efird (Bangladesh) Ltd.
                                 </Link>{" "}
-                                (Jun 2026 to Present). Building Nexoura AI and A&amp;E
-                                Digital: an AI chatbot and a Flutter sales app used by
-                                100+ people, with chat-based order tracking and
-                                multi-country order entry live in Bangladesh and rolling
-                                out to Europe.
+                                (Jun 2026 to Present). Extending Nexoura AI and
+                                building A&amp;E Digital: an AI chatbot and a Flutter
+                                sales app used by 100+ people, with chat-based order
+                                tracking and multi-country order entry live in
+                                Bangladesh and rolling out to Europe.
                             </Paragraph>
                             <UnorderedList mt={4} spacing={2} pl={1} fontSize="sm">
                                 {aeBullets.map((bullet, index) => (
