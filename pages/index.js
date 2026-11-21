@@ -501,11 +501,7 @@ const Page = () => {
                                 <Link href="https://github.com/JunaedAbed" target="_blank">
                                     Coding
                                 </Link>
-                                , Football,{" "}
-                                <Link href="https://www.instagram.com/mugdho.nef/" target="_blank">
-                                    Photography
-                                </Link>
-                                , Watching Series
+                                , Football, Photography, Watching Series
                             </Paragraph>
                         </Section>
                     </Box>
