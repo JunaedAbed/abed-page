@@ -51,8 +51,8 @@ def job(co, when, ttl, stack, items):
 
 # A&E bullets: keep identical to aeBullets in pages/index.js
 AE_BULLETS = [
-    "Built <b>Nexoura AI</b>, the company's AI chatbot, with an ASP.NET Core backend and Flutter companion apps on Android and iOS.",
-    "Shipped <b>chat-based order tracking</b>: customers ask about an order in plain language, and the bot finds their customer codes, pulls out the order ID, calls the right country's order API and returns item status and invoice numbers.",
+    "Maintain and extend <b>Nexoura AI</b>, the company's AI chatbot (ASP.NET Core backend, Flutter companion apps on Android and iOS), shipping new features end to end.",
+    "Added <b>chat-based order tracking</b> to Nexoura: customers ask about an order in plain language, and the bot finds their customer codes, pulls out the order ID, calls the right country's order API and returns item status and invoice numbers.",
     "Delivered <b>A&amp;E Digital</b>, a Flutter product catalog and sales app with an admin panel. It has <b>100+ users</b> in its first phase and is built for global rollout: live in Bangladesh, with Europe next.",
     "Built <b>multi-country sales order entry</b>, now live, with per-country screens and API routing, draft and confirmed order states, and an approval workflow with a dedicated approver role and email notifications.",
     "Restructured the backend into feature modules and built JWT guest auth with refresh tokens, shared by the mobile and web clients.",
