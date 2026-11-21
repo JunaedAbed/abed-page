@@ -121,12 +121,9 @@ const Page = () => {
             refresh tokens, shared by the mobile and web clients.
         </>,
         <>
-            Building the <strong>LFA approval workflow</strong> in the company HRIS.
-        </>,
-        <>
-            Built an ASP.NET Core web portal for app store compliance (privacy-policy
-            admin, account deletion). Set up the company&apos;s Google Play and Apple
-            Developer organization accounts with the global IT team.
+            Built the approvals module in A&amp;E Digital: leave and LFA approvals are
+            live, single-price and bulk-price approvals are in progress, and 10+ more
+            approval types are planned.
         </>,
         <>
             Maintain a legacy Java Android app (TLS fixes, AndroidX migration,
