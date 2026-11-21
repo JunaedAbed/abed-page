@@ -20,8 +20,8 @@ const Work = () => (
         <WorkInfoPanel>
           <P>
             Nexoura AI is the AI chatbot at American &amp; Efird (Bangladesh)
-            Ltd., built with an ASP.NET Core backend and Flutter companion apps
-            on Android and iOS.
+            Ltd.: an ASP.NET Core backend with Flutter companion apps on Android
+            and iOS. I maintain it and ship new features end to end.
           </P>
           <List ml={0} my={4} spacing={3}>
             <ListItem>
