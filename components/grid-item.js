@@ -4,63 +4,70 @@ import {
   AspectRatio,
   Box,
   LinkBox,
-  Tag,
   LinkOverlay,
   Text,
-  useColorModeValue,
+  Wrap,
 } from "@chakra-ui/react";
 import { Global } from "@emotion/react";
+import { Chip, MonoLabel, usePalette } from "./design";
 
 const useCardStyle = () => {
-  const cardBg = useColorModeValue("white", "whiteAlpha.100");
-  const cardBorder = useColorModeValue("blackAlpha.100", "whiteAlpha.100");
-  const cardShadow = useColorModeValue(
-    "0 18px 48px rgba(15, 23, 42, 0.10)",
-    "0 18px 48px rgba(0, 0, 0, 0.24)"
-  );
+  const { border, cardBg, cardHover } = usePalette();
 
   return {
     h: "full",
     display: "flex",
     flexDirection: "column",
     cursor: "pointer",
-    p: 4,
-    borderRadius: "28px",
+    p: 3,
+    borderRadius: "16px",
     bg: cardBg,
     border: "1px solid",
-    borderColor: cardBorder,
-    boxShadow: cardShadow,
-    transition: "transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease",
-    _hover: { transform: "translateY(-4px)", borderColor: "teal.300" },
+    borderColor: border,
+    transition: "transform 0.2s ease, border-color 0.2s ease",
+    _hover: { transform: "translateY(-3px)", borderColor: cardHover },
   };
 };
 
-const TitleText = ({ children }) => (
-  <Text mt={4} fontSize="lg" fontWeight="semibold" lineHeight={1.2}>
-    {children}
-  </Text>
-);
+const TitleText = ({ children, mt = 4 }) => {
+  const { strong } = usePalette();
+  return (
+    <Text
+      mt={mt}
+      px={2}
+      fontSize="17px"
+      fontWeight={600}
+      lineHeight={1.3}
+      color={strong}
+    >
+      {children}
+    </Text>
+  );
+};
 
-const DescriptionText = ({ children }) => (
-  <Text
-    mt={2}
-    fontSize={14}
-    color={useColorModeValue("gray.600", "gray.400")}
-    minH="3.5em"
-  >
-    {children}
-  </Text>
-);
+const DescriptionText = ({ children }) => {
+  const { muted } = usePalette();
+  return (
+    <Text mt={1} px={2} pb={2} fontSize="14px" lineHeight={1.6} color={muted}>
+      {children}
+    </Text>
+  );
+};
+
+const MetaText = ({ children }) =>
+  children ? (
+    <MonoLabel mt={4} px={2} fontSize="11px">
+      {children}
+    </MonoLabel>
+  ) : null;
 
 const StackTags = ({ stack }) =>
   stack && stack.length ? (
-    <Box mt={3} display="flex" flexWrap="wrap" gap={2}>
+    <Wrap spacing={2} mt="auto" pt={2} px={2} pb={2}>
       {stack.map((tech) => (
-        <Tag key={tech} size="sm" borderRadius="full" colorScheme="teal" variant="subtle">
-          {tech}
-        </Tag>
+        <Chip key={tech}>{tech}</Chip>
       ))}
-    </Box>
+    </Wrap>
   ) : null;
 
 export const GridItem = ({ children, href, title, thumbnail }) => (
@@ -84,7 +91,14 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
   </Box>
 );
 
-export const WorkGridItem = ({ children, id, title, thumbnail, stack }) => (
+export const WorkGridItem = ({
+  children,
+  id,
+  title,
+  thumbnail,
+  stack,
+  meta,
+}) => (
   <Box w="100%" textAlign="left">
     <NextLink href={`/works/${id}`} legacyBehavior>
       <LinkBox {...useCardStyle()}>
@@ -97,8 +111,9 @@ export const WorkGridItem = ({ children, id, title, thumbnail, stack }) => (
             style={{ objectFit: "cover" }}
           />
         </AspectRatio>
+        <MetaText>{meta}</MetaText>
         <LinkOverlay href={`/works/${id}`}>
-          <TitleText>{title}</TitleText>
+          <TitleText mt={meta ? 1 : 4}>{title}</TitleText>
         </LinkOverlay>
         <DescriptionText>{children}</DescriptionText>
         <StackTags stack={stack} />
@@ -111,7 +126,7 @@ export const GridItemStyle = () => (
   <Global
     styles={`
       .grid-item-thumbnail {
-        border-radius: 16px;
+        border-radius: 10px;
       }
     `}
   />
