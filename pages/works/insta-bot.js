@@ -13,7 +13,7 @@ import Layout from "../../components/layouts/article";
 
 const Work = () => (
   <Layout title="Instagram Bot">
-    <Container maxW="6xl" px={{ base: 4, md: 6 }}>
+    <Container maxW="1200px" px={{ base: 0, md: 2 }}>
       <Title>
         Instagram Bot <Badge>2021</Badge>
       </Title>

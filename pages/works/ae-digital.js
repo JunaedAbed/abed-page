@@ -12,7 +12,7 @@ import {
 
 const Work = () => (
   <Layout title="A&E Digital">
-    <Container maxW="6xl" px={{ base: 4, md: 6 }}>
+    <Container maxW="1200px" px={{ base: 0, md: 2 }}>
       <Title>
         A&amp;E Digital <Badge>2026</Badge>
       </Title>

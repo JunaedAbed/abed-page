@@ -12,13 +12,16 @@ import {
 
 const Work = () => (
   <Layout title="HRIS">
-    <Container maxW="6xl" px={{ base: 4, md: 6 }}>
+    <Container maxW="1200px" px={{ base: 0, md: 2 }}>
       <Title>
         HRIS <Badge>2025</Badge>
       </Title>
       <WorkDetailGrid>
         <WorkInfoPanel>
-          <P>An HR management system with role-based access and automated HR workflows.</P>
+          <P>
+            An HR management system with role-based access and automated HR
+            workflows.
+          </P>
           <List ml={0} my={4} spacing={3}>
             <ListItem>
               <Meta>Company</Meta>
@@ -36,7 +39,9 @@ const Work = () => (
           <List ml={0} my={4} spacing={3}>
             <ListItem>
               <Meta>Modules</Meta>
-              <span>Movement, Menu Permission &amp; Action, TADA, Letter Dispatch</span>
+              <span>
+                Movement, Menu Permission &amp; Action, TADA, Letter Dispatch
+              </span>
             </ListItem>
             <ListItem>
               <Meta>Access control</Meta>
