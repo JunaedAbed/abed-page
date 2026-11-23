@@ -119,10 +119,17 @@ export const SideNav = ({
   onSelect,
   label = "Page sections",
 }) => {
-  const { accent, strong, muted, faint } = usePalette();
+  const { accent, strong, muted, faint, border, chipBg } = usePalette();
   return (
-    <Box as="nav" aria-label={label} display={{ base: "none", lg: "block" }}>
-      <Stack spacing={1}>
+    <>
+      {/* Phones and tablets: a wrapping row of section buttons */}
+      <Box
+        as="nav"
+        aria-label={label}
+        display={{ base: "flex", lg: "none" }}
+        flexWrap="wrap"
+        gap={2}
+      >
         {items.map(({ id, label: text, count }) => {
           const isActive = active === id;
           return (
@@ -130,41 +137,80 @@ export const SideNav = ({
               key={id}
               href={`#${id}`}
               onClick={() => onSelect(id)}
-              display="flex"
+              display="inline-flex"
               alignItems="center"
-              gap={4}
-              minH="40px"
-              fontSize="13px"
+              gap={2}
+              minH="44px"
+              px={4}
+              borderRadius="full"
+              border="1px solid"
+              borderColor={isActive ? "transparent" : border}
+              bg={isActive ? chipBg : "transparent"}
+              fontSize="12px"
               fontWeight={600}
-              letterSpacing="0.1em"
+              letterSpacing="0.08em"
               textTransform="uppercase"
-              color={isActive ? strong : muted}
+              color={isActive ? accent : muted}
               aria-current={isActive ? "true" : undefined}
               _hover={{ color: strong, textDecoration: "none" }}
             >
-              <Box
-                as="span"
-                h="1px"
-                w={isActive ? "64px" : "32px"}
-                bg={isActive ? accent : faint}
-                transition="width 0.2s ease, background 0.2s ease"
-              />
               {text}
               {count !== undefined && (
-                <Text
-                  as="span"
-                  fontFamily={MONO}
-                  fontWeight={400}
-                  color={muted}
-                >
+                <Text as="span" fontFamily={MONO} fontWeight={400}>
                   {String(count).padStart(2, "0")}
                 </Text>
               )}
             </Link>
           );
         })}
-      </Stack>
-    </Box>
+      </Box>
+
+      {/* Large screens: vertical menu in the sticky sidebar */}
+      <Box as="nav" aria-label={label} display={{ base: "none", lg: "block" }}>
+        <Stack spacing={1}>
+          {items.map(({ id, label: text, count }) => {
+            const isActive = active === id;
+            return (
+              <Link
+                key={id}
+                href={`#${id}`}
+                onClick={() => onSelect(id)}
+                display="flex"
+                alignItems="center"
+                gap={4}
+                minH="40px"
+                fontSize="13px"
+                fontWeight={600}
+                letterSpacing="0.1em"
+                textTransform="uppercase"
+                color={isActive ? strong : muted}
+                aria-current={isActive ? "true" : undefined}
+                _hover={{ color: strong, textDecoration: "none" }}
+              >
+                <Box
+                  as="span"
+                  h="1px"
+                  w={isActive ? "64px" : "32px"}
+                  bg={isActive ? accent : faint}
+                  transition="width 0.2s ease, background 0.2s ease"
+                />
+                {text}
+                {count !== undefined && (
+                  <Text
+                    as="span"
+                    fontFamily={MONO}
+                    fontWeight={400}
+                    color={muted}
+                  >
+                    {String(count).padStart(2, "0")}
+                  </Text>
+                )}
+              </Link>
+            );
+          })}
+        </Stack>
+      </Box>
+    </>
   );
 };
 

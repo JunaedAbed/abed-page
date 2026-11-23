@@ -19,6 +19,8 @@ const ThemeToggleButton = () => {
           aria-label="Toggle theme"
           variant="ghost"
           isRound
+          w="44px"
+          h="44px"
           color={useColorModeValue("#0071e3", "#5ec2ff")}
           bg={useColorModeValue("blackAlpha.50", "whiteAlpha.100")}
           _hover={{ bg: useColorModeValue("blackAlpha.100", "whiteAlpha.200") }}

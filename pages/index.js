@@ -382,7 +382,7 @@ const Page = () => {
                 fontFamily={MONO}
                 fontSize="12px"
                 color={muted}
-                w="130px"
+                w={{ base: "full", md: "130px" }}
                 pt={1}
                 flexShrink={0}
               >
@@ -410,6 +410,7 @@ const Page = () => {
                 <Button
                   mt={3}
                   size="sm"
+                  minH="44px"
                   variant="ghost"
                   color={accent}
                   px={2}
@@ -445,7 +446,7 @@ const Page = () => {
                   fontFamily={MONO}
                   fontSize="12px"
                   color={muted}
-                  w="130px"
+                  w={{ base: "full", md: "130px" }}
                   pt={1}
                   flexShrink={0}
                   textTransform="uppercase"
@@ -522,6 +523,7 @@ const Page = () => {
               target="_blank"
               mt={4}
               size="sm"
+              minH="44px"
               variant="outline"
               borderColor={border}
               color={body}
@@ -583,7 +585,7 @@ const Page = () => {
                   fontFamily={MONO}
                   fontSize="12px"
                   color={muted}
-                  w="130px"
+                  w={{ base: "full", md: "130px" }}
                   pt={1}
                   flexShrink={0}
                 >
@@ -610,7 +612,7 @@ const Page = () => {
                   fontFamily={MONO}
                   fontSize="12px"
                   color={muted}
-                  w="130px"
+                  w={{ base: "full", md: "130px" }}
                   pt={1}
                   flexShrink={0}
                 >

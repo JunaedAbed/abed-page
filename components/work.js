@@ -68,13 +68,7 @@ const useImageStyle = () => {
 };
 
 export const WorkImage = ({ src, alt }) => (
-  <Image
-    {...useImageStyle()}
-    maxH={{ base: "220px", md: "none" }}
-    objectFit="cover"
-    src={src}
-    alt={alt}
-  />
+  <Image {...useImageStyle()} src={src} alt={alt} />
 );
 
 export const WorkImageApp = ({ src, alt }) => (

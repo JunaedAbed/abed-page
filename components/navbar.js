@@ -102,8 +102,10 @@ const Navbar = (props) => {
                 variant="outline"
                 color={useColorModeValue("#1d1d1f", "#f5f5f7")}
                 borderColor={useColorModeValue("blackAlpha.300", "whiteAlpha.400")}
-                aria-label="Options"
-                size="sm"
+                size="md"
+                w="44px"
+                h="44px"
+                aria-label="Open menu"
               />
               <MenuList
                 bg={useColorModeValue("#ffffff", "#101114")}

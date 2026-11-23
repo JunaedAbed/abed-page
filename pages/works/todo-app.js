@@ -20,7 +20,7 @@ import Layout from "../../components/layouts/article";
 
 const Work = () => (
   <Layout title="Todo App">
-    <Container maxW="6xl" px={{ base: 4, md: 6 }}>
+    <Container maxW="1200px" px={{ base: 0, md: 2 }}>
       <Title>
         Todo App <Badge>2020</Badge>
       </Title>
